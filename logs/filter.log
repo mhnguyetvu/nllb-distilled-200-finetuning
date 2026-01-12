@@ -1,0 +1,429 @@
+2026-01-05 15:27:48,917 - __main__ - INFO - Logging initialized. Console + File: logs\filter.log
+2026-01-05 15:27:48,917 - __main__ - INFO - 
+======================================================================
+2026-01-05 15:27:48,917 - __main__ - INFO - STAGE 4: FILTERING PIPELINE
+2026-01-05 15:27:48,917 - __main__ - INFO - ======================================================================
+
+2026-01-05 15:27:48,928 - __main__ - ERROR - Error in stage 'filter': No module named 'fasttext'
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 331, in run_filtering
+    from filter_pipeline import FilterPipeline
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\filter_pipeline.py", line 22, in <module>
+    import fasttext
+ModuleNotFoundError: No module named 'fasttext'
+2026-01-05 15:29:16,128 - __main__ - INFO - Logging initialized. Console + File: logs\filter.log
+2026-01-05 15:29:16,129 - __main__ - INFO - 
+======================================================================
+2026-01-05 15:29:16,129 - __main__ - INFO - STAGE 4: FILTERING PIPELINE
+2026-01-05 15:29:16,129 - __main__ - INFO - ======================================================================
+
+2026-01-05 15:29:16,137 - __main__ - ERROR - Error in stage 'filter': No module named 'fasttext'
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 331, in run_filtering
+    from filter_pipeline import FilterPipeline
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\filter_pipeline.py", line 22, in <module>
+    import fasttext
+ModuleNotFoundError: No module named 'fasttext'
+2026-01-05 15:34:01,945 - __main__ - INFO - Logging initialized. Console + File: logs\filter.log
+2026-01-05 15:34:01,945 - __main__ - INFO - 
+======================================================================
+2026-01-05 15:34:01,945 - __main__ - INFO - STAGE 4: FILTERING PIPELINE
+2026-01-05 15:34:01,945 - __main__ - INFO - ======================================================================
+
+2026-01-05 15:34:18,768 - filter_pipeline - INFO - Using langdetect for language detection
+2026-01-05 15:34:18,769 - filter_pipeline - INFO - Loading tokenizers...
+2026-01-05 15:34:18,769 - filter_pipeline - WARNING -   Korean tokenizer (Kiwi): not available, using simple split
+2026-01-05 15:34:18,769 - filter_pipeline - INFO - Loading LaBSE embeddings...
+2026-01-05 15:34:18,771 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-05 15:34:18,771 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/LaBSE
+2026-01-05 15:34:25,582 - __main__ - ERROR - Error in stage 'filter': 'NoneType' object has no attribute 'tokenize'
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 334, in run_filtering
+    pipeline.process_aligned_sentences(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        input_path=filter_config['input_file'],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        output_path=filter_config['output_file']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\filter_pipeline.py", line 488, in process_aligned_sentences
+    passed, filter_results = self.apply_filters(ko_sent, vi_sent)
+                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\filter_pipeline.py", line 454, in apply_filters
+    passed, reason = filter_func(ko_sent, vi_sent)
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\filter_pipeline.py", line 347, in filter_fragments
+    ko_words = len(self.ko_tokenizer.tokenize(ko_sent))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'tokenize'
+2026-01-05 15:48:28,267 - __main__ - INFO - Logging initialized. Console + File: logs\filter.log
+2026-01-05 15:48:28,267 - __main__ - INFO - 
+======================================================================
+2026-01-05 15:48:28,267 - __main__ - INFO - STAGE 4: FILTERING PIPELINE
+2026-01-05 15:48:28,267 - __main__ - INFO - ======================================================================
+
+2026-01-05 15:48:40,002 - filter_pipeline - INFO - Using langdetect for language detection
+2026-01-05 15:48:40,003 - filter_pipeline - INFO - Loading tokenizers...
+2026-01-05 15:48:40,003 - filter_pipeline - WARNING -   Korean tokenizer (Kiwi): not available, using simple split
+2026-01-05 15:48:40,003 - filter_pipeline - INFO - Loading LaBSE embeddings...
+2026-01-05 15:48:40,005 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-05 15:48:40,005 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/LaBSE
+2026-01-05 15:48:46,351 - __main__ - ERROR - Error in stage 'filter': 'NoneType' object has no attribute 'tokenize'
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 334, in run_filtering
+    pipeline.process_aligned_sentences(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        input_path=filter_config['input_file'],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        output_path=filter_config['output_file']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\filter_pipeline.py", line 488, in process_aligned_sentences
+    passed, filter_results = self.apply_filters(ko_sent, vi_sent)
+                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\filter_pipeline.py", line 454, in apply_filters
+    passed, reason = filter_func(ko_sent, vi_sent)
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\filter_pipeline.py", line 347, in filter_fragments
+    ko_words = len(self.ko_tokenizer.tokenize(ko_sent))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'tokenize'
+2026-01-05 15:49:05,517 - __main__ - INFO - Logging initialized. Console + File: logs\filter.log
+2026-01-05 15:49:05,518 - __main__ - INFO - 
+======================================================================
+2026-01-05 15:49:05,518 - __main__ - INFO - STAGE 4: FILTERING PIPELINE
+2026-01-05 15:49:05,518 - __main__ - INFO - ======================================================================
+
+2026-01-05 15:49:12,763 - filter_pipeline - INFO - Using langdetect for language detection
+2026-01-05 15:49:12,763 - filter_pipeline - INFO - Loading tokenizers...
+2026-01-05 15:49:12,764 - filter_pipeline - WARNING -   Korean tokenizer (Kiwi): not available, using simple split
+2026-01-05 15:49:12,764 - filter_pipeline - INFO - Loading LaBSE embeddings...
+2026-01-05 15:49:12,766 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-05 15:49:12,766 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/LaBSE
+2026-01-05 15:49:19,505 - __main__ - ERROR - Error in stage 'filter': 'NoneType' object has no attribute 'tokenize'
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 334, in run_filtering
+    pipeline.process_aligned_sentences(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        input_path=filter_config['input_file'],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        output_path=filter_config['output_file']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\filter_pipeline.py", line 488, in process_aligned_sentences
+    passed, filter_results = self.apply_filters(ko_sent, vi_sent)
+                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\filter_pipeline.py", line 454, in apply_filters
+    passed, reason = filter_func(ko_sent, vi_sent)
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\filter_pipeline.py", line 347, in filter_fragments
+    ko_words = len(self.ko_tokenizer.tokenize(ko_sent))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'tokenize'
+2026-01-05 15:50:54,729 - __main__ - INFO - Logging initialized. Console + File: logs\filter.log
+2026-01-05 15:50:54,730 - __main__ - INFO - 
+======================================================================
+2026-01-05 15:50:54,730 - __main__ - INFO - STAGE 4: FILTERING PIPELINE
+2026-01-05 15:50:54,730 - __main__ - INFO - ======================================================================
+
+2026-01-05 15:51:02,633 - filter_pipeline - INFO - Using langdetect for language detection
+2026-01-05 15:51:02,634 - filter_pipeline - INFO - Loading tokenizers...
+2026-01-05 15:51:02,634 - filter_pipeline - WARNING -   Korean tokenizer (Kiwi): not available, using simple split
+2026-01-05 15:51:02,634 - filter_pipeline - INFO - Loading LaBSE embeddings...
+2026-01-05 15:51:02,636 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-05 15:51:02,636 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/LaBSE
+2026-01-05 15:51:15,663 - filter_pipeline - INFO - 
+======================================================================
+2026-01-05 15:51:15,663 - filter_pipeline - INFO - FILTER PIPELINE STATISTICS
+2026-01-05 15:51:15,664 - filter_pipeline - INFO - ======================================================================
+2026-01-05 15:51:15,664 - filter_pipeline - INFO - Total input sentences: 103
+2026-01-05 15:51:15,664 - filter_pipeline - INFO - Total passed: 64 (62.1%)
+2026-01-05 15:51:15,664 - filter_pipeline - INFO - Total filtered: 39
+2026-01-05 15:51:15,664 - filter_pipeline - INFO - 
+Per-filter statistics:
+2026-01-05 15:51:15,665 - filter_pipeline - INFO - ----------------------------------------------------------------------
+2026-01-05 15:51:15,665 - filter_pipeline - INFO - Filter                         Input     Passed     Failed    Pass%
+2026-01-05 15:51:15,665 - filter_pipeline - INFO - ----------------------------------------------------------------------
+2026-01-05 15:51:15,665 - filter_pipeline - INFO - lang_detection                   103        103          0   100.0%
+2026-01-05 15:51:15,665 - filter_pipeline - INFO - deduplication                    103         96          7    93.2%
+2026-01-05 15:51:15,665 - filter_pipeline - INFO - content_quality                   96         96          0   100.0%
+2026-01-05 15:51:15,666 - filter_pipeline - INFO - length_ratio                      96         89          7    92.7%
+2026-01-05 15:51:15,666 - filter_pipeline - INFO - script_validation                 89         89          0   100.0%
+2026-01-05 15:51:15,666 - filter_pipeline - INFO - repetition                        89         89          0   100.0%
+2026-01-05 15:51:15,666 - filter_pipeline - INFO - web_artifacts                     89         89          0   100.0%
+2026-01-05 15:51:15,666 - filter_pipeline - INFO - commercial_spam                   89         82          7    92.1%
+2026-01-05 15:51:15,667 - filter_pipeline - INFO - fragments                         82         64         18    78.0%
+2026-01-05 15:51:15,667 - filter_pipeline - INFO - mt_artifacts                      64         64          0   100.0%
+2026-01-05 15:51:15,667 - filter_pipeline - INFO - token_ratio                       64         64          0   100.0%
+2026-01-05 15:51:15,667 - filter_pipeline - INFO - labse_similarity                  64         64          0   100.0%
+2026-01-05 15:51:15,667 - filter_pipeline - INFO - ======================================================================
+
+2026-01-05 15:51:15,668 - filter_pipeline - INFO - 
+Filtered dataset saved to: data/processed/filtered_sentences.jsonl
+2026-01-05 15:51:15,668 - __main__ - INFO - Stage 4 complete.
+
+2026-01-05 15:51:15,668 - __main__ - INFO - 
+======================================================================
+2026-01-05 15:51:15,669 - __main__ - INFO - PIPELINE COMPLETE!
+2026-01-05 15:51:15,669 - __main__ - INFO - ======================================================================
+
+2026-01-09 08:54:01,506 - __main__ - INFO - Logging initialized. Console + File: logs\filter.log
+2026-01-09 08:54:01,506 - __main__ - INFO - 
+======================================================================
+2026-01-09 08:54:01,506 - __main__ - INFO - STAGE 4: FILTERING PIPELINE
+2026-01-09 08:54:01,506 - __main__ - INFO - ======================================================================
+
+2026-01-09 08:54:27,029 - __main__ - ERROR - Error in stage 'filter': No module named 'langdetect'
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 331, in run_filtering
+    from filter_pipeline import FilterPipeline
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\filter_pipeline.py", line 25, in <module>
+    from langdetect import detect, DetectorFactory
+ModuleNotFoundError: No module named 'langdetect'
+2026-01-09 08:58:57,815 - __main__ - INFO - Logging initialized. Console + File: logs\filter.log
+2026-01-09 08:58:57,815 - __main__ - INFO - 
+======================================================================
+2026-01-09 08:58:57,815 - __main__ - INFO - STAGE 4: FILTERING PIPELINE
+2026-01-09 08:58:57,815 - __main__ - INFO - ======================================================================
+
+2026-01-09 08:59:09,666 - __main__ - ERROR - Error in stage 'filter': No module named 'langdetect'
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 331, in run_filtering
+    from filter_pipeline import FilterPipeline
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\filter_pipeline.py", line 25, in <module>
+    from langdetect import detect, DetectorFactory
+ModuleNotFoundError: No module named 'langdetect'
+2026-01-09 08:59:32,977 - __main__ - INFO - Logging initialized. Console + File: logs\filter.log
+2026-01-09 08:59:32,977 - __main__ - INFO - 
+======================================================================
+2026-01-09 08:59:32,977 - __main__ - INFO - STAGE 4: FILTERING PIPELINE
+2026-01-09 08:59:32,977 - __main__ - INFO - ======================================================================
+
+2026-01-09 08:59:41,325 - __main__ - ERROR - Error in stage 'filter': No module named 'langdetect'
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 331, in run_filtering
+    from filter_pipeline import FilterPipeline
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\filter_pipeline.py", line 25, in <module>
+    from langdetect import detect, DetectorFactory
+ModuleNotFoundError: No module named 'langdetect'
+2026-01-09 09:01:56,481 - __main__ - INFO - Logging initialized. Console + File: logs\filter.log
+2026-01-09 09:01:56,481 - __main__ - INFO - 
+======================================================================
+2026-01-09 09:01:56,481 - __main__ - INFO - STAGE 4: FILTERING PIPELINE
+2026-01-09 09:01:56,481 - __main__ - INFO - ======================================================================
+
+2026-01-09 09:02:12,716 - filter_pipeline - INFO - Using langdetect for language detection
+2026-01-09 09:02:12,716 - filter_pipeline - INFO - Loading tokenizers...
+2026-01-09 09:02:13,666 - filter_pipeline - INFO -   Korean tokenizer (Kiwi): loaded
+2026-01-09 09:02:13,666 - filter_pipeline - INFO - Loading LaBSE embeddings...
+2026-01-09 09:02:13,672 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-09 09:02:13,672 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/LaBSE
+2026-01-09 09:02:42,400 - filter_pipeline - INFO - Processed 1000 sentences, passed 77 (7.7%)
+2026-01-09 09:02:48,216 - filter_pipeline - INFO - Processed 2000 sentences, passed 77 (3.9%)
+2026-01-09 09:02:48,301 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:02:49,742 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:02:52,254 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:02:54,623 - filter_pipeline - INFO - Processed 3000 sentences, passed 77 (2.6%)
+2026-01-09 09:03:00,300 - filter_pipeline - INFO - Processed 4000 sentences, passed 77 (1.9%)
+2026-01-09 09:03:06,657 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:03:06,733 - filter_pipeline - INFO - Processed 5000 sentences, passed 77 (1.5%)
+2026-01-09 09:03:07,071 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:03:07,484 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:03:12,746 - filter_pipeline - INFO - Processed 6000 sentences, passed 77 (1.3%)
+2026-01-09 09:03:12,940 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:03:13,500 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:03:14,049 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:03:14,612 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:03:15,282 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:03:15,851 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:03:18,527 - filter_pipeline - INFO - Processed 7000 sentences, passed 77 (1.1%)
+2026-01-09 09:03:24,896 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:03:25,121 - filter_pipeline - INFO - Processed 8000 sentences, passed 77 (1.0%)
+2026-01-09 09:03:26,400 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:03:38,209 - filter_pipeline - INFO - Processed 9000 sentences, passed 296 (3.3%)
+2026-01-09 09:04:06,377 - filter_pipeline - INFO - Processed 10000 sentences, passed 810 (8.1%)
+2026-01-09 09:04:32,003 - filter_pipeline - INFO - Processed 11000 sentences, passed 1371 (12.5%)
+2026-01-09 09:04:57,647 - filter_pipeline - INFO - Processed 12000 sentences, passed 1923 (16.0%)
+2026-01-09 09:05:23,079 - filter_pipeline - INFO - Processed 13000 sentences, passed 2470 (19.0%)
+2026-01-09 09:05:50,188 - filter_pipeline - INFO - Processed 14000 sentences, passed 2999 (21.4%)
+2026-01-09 09:06:17,798 - filter_pipeline - INFO - Processed 15000 sentences, passed 3558 (23.7%)
+2026-01-09 09:06:51,794 - filter_pipeline - INFO - Processed 16000 sentences, passed 4144 (25.9%)
+2026-01-09 09:07:25,079 - filter_pipeline - INFO - Processed 17000 sentences, passed 4820 (28.4%)
+2026-01-09 09:07:56,430 - filter_pipeline - INFO - Processed 18000 sentences, passed 5397 (30.0%)
+2026-01-09 09:08:25,498 - filter_pipeline - INFO - Processed 19000 sentences, passed 5946 (31.3%)
+2026-01-09 09:08:55,509 - filter_pipeline - INFO - Processed 20000 sentences, passed 6498 (32.5%)
+2026-01-09 09:09:14,256 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:09:26,690 - filter_pipeline - INFO - Processed 21000 sentences, passed 7032 (33.5%)
+2026-01-09 09:09:56,798 - filter_pipeline - INFO - Processed 22000 sentences, passed 7600 (34.5%)
+2026-01-09 09:10:27,320 - filter_pipeline - INFO - Processed 23000 sentences, passed 8178 (35.6%)
+2026-01-09 09:10:53,595 - filter_pipeline - INFO - Processed 24000 sentences, passed 8636 (36.0%)
+2026-01-09 09:11:18,546 - filter_pipeline - INFO - Processed 25000 sentences, passed 9083 (36.3%)
+2026-01-09 09:11:41,852 - filter_pipeline - INFO - Processed 26000 sentences, passed 9520 (36.6%)
+2026-01-09 09:12:07,463 - filter_pipeline - INFO - Processed 27000 sentences, passed 9962 (36.9%)
+2026-01-09 09:12:35,427 - filter_pipeline - INFO - Processed 28000 sentences, passed 10437 (37.3%)
+2026-01-09 09:13:15,403 - filter_pipeline - INFO - Processed 29000 sentences, passed 11090 (38.2%)
+2026-01-09 09:13:53,151 - filter_pipeline - INFO - Processed 30000 sentences, passed 11740 (39.1%)
+2026-01-09 09:14:28,567 - filter_pipeline - INFO - Processed 31000 sentences, passed 12377 (39.9%)
+2026-01-09 09:15:07,984 - filter_pipeline - INFO - Processed 32000 sentences, passed 13012 (40.7%)
+2026-01-09 09:15:47,187 - filter_pipeline - INFO - Processed 33000 sentences, passed 13650 (41.4%)
+2026-01-09 09:16:21,537 - filter_pipeline - INFO - Processed 34000 sentences, passed 14298 (42.1%)
+2026-01-09 09:16:59,771 - filter_pipeline - INFO - Processed 35000 sentences, passed 15004 (42.9%)
+2026-01-09 09:17:02,658 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:17:11,099 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:17:11,135 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:17:11,185 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:17:11,226 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:17:11,227 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:17:27,658 - filter_pipeline - INFO - Processed 36000 sentences, passed 15503 (43.1%)
+2026-01-09 09:17:55,112 - filter_pipeline - INFO - Processed 37000 sentences, passed 16003 (43.3%)
+2026-01-09 09:18:28,225 - filter_pipeline - INFO - Processed 38000 sentences, passed 16573 (43.6%)
+2026-01-09 09:19:07,474 - filter_pipeline - INFO - Processed 39000 sentences, passed 17347 (44.5%)
+2026-01-09 09:19:45,280 - filter_pipeline - INFO - Processed 40000 sentences, passed 18091 (45.2%)
+2026-01-09 09:20:15,442 - filter_pipeline - INFO - Processed 41000 sentences, passed 18656 (45.5%)
+2026-01-09 09:20:30,682 - filter_pipeline - INFO - Processed 42000 sentences, passed 18918 (45.0%)
+2026-01-09 09:20:49,434 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:20:50,471 - filter_pipeline - INFO - Processed 43000 sentences, passed 19279 (44.8%)
+2026-01-09 09:20:52,658 - filter_pipeline - INFO - Processed 44000 sentences, passed 19287 (43.8%)
+2026-01-09 09:20:54,199 - filter_pipeline - INFO - Processed 45000 sentences, passed 19287 (42.9%)
+2026-01-09 09:20:55,371 - filter_pipeline - INFO - Processed 46000 sentences, passed 19287 (41.9%)
+2026-01-09 09:20:56,763 - filter_pipeline - INFO - Processed 47000 sentences, passed 19287 (41.0%)
+2026-01-09 09:20:58,197 - filter_pipeline - INFO - Processed 48000 sentences, passed 19287 (40.2%)
+2026-01-09 09:20:58,709 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:20:59,626 - filter_pipeline - INFO - Processed 49000 sentences, passed 19287 (39.4%)
+2026-01-09 09:20:59,681 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:21:00,944 - filter_pipeline - INFO - Processed 50000 sentences, passed 19287 (38.6%)
+2026-01-09 09:21:02,226 - filter_pipeline - INFO - Processed 51000 sentences, passed 19287 (37.8%)
+2026-01-09 09:21:03,513 - filter_pipeline - INFO - Processed 52000 sentences, passed 19287 (37.1%)
+2026-01-09 09:21:04,645 - filter_pipeline - INFO - Processed 53000 sentences, passed 19287 (36.4%)
+2026-01-09 09:21:06,076 - filter_pipeline - INFO - Processed 54000 sentences, passed 19287 (35.7%)
+2026-01-09 09:21:07,449 - filter_pipeline - INFO - Processed 55000 sentences, passed 19287 (35.1%)
+2026-01-09 09:21:08,860 - filter_pipeline - INFO - Processed 56000 sentences, passed 19287 (34.4%)
+2026-01-09 09:21:10,447 - filter_pipeline - INFO - Processed 57000 sentences, passed 19287 (33.8%)
+2026-01-09 09:21:12,059 - filter_pipeline - INFO - Processed 58000 sentences, passed 19287 (33.3%)
+2026-01-09 09:21:13,531 - filter_pipeline - INFO - Processed 59000 sentences, passed 19287 (32.7%)
+2026-01-09 09:21:14,787 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:21:14,856 - filter_pipeline - INFO - Processed 60000 sentences, passed 19287 (32.1%)
+2026-01-09 09:21:16,151 - filter_pipeline - INFO - Processed 61000 sentences, passed 19287 (31.6%)
+2026-01-09 09:21:17,388 - filter_pipeline - INFO - Processed 62000 sentences, passed 19287 (31.1%)
+2026-01-09 09:21:18,687 - filter_pipeline - INFO - Processed 63000 sentences, passed 19287 (30.6%)
+2026-01-09 09:21:19,241 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:21:20,029 - filter_pipeline - INFO - Processed 64000 sentences, passed 19287 (30.1%)
+2026-01-09 09:21:20,125 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:21:21,293 - filter_pipeline - INFO - Processed 65000 sentences, passed 19287 (29.7%)
+2026-01-09 09:21:22,687 - filter_pipeline - INFO - Processed 66000 sentences, passed 19287 (29.2%)
+2026-01-09 09:21:24,037 - filter_pipeline - INFO - Processed 67000 sentences, passed 19287 (28.8%)
+2026-01-09 09:21:25,310 - filter_pipeline - INFO - Processed 68000 sentences, passed 19287 (28.4%)
+2026-01-09 09:21:26,668 - filter_pipeline - INFO - Processed 69000 sentences, passed 19287 (28.0%)
+2026-01-09 09:21:27,896 - filter_pipeline - INFO - Processed 70000 sentences, passed 19287 (27.6%)
+2026-01-09 09:21:29,310 - filter_pipeline - INFO - Processed 71000 sentences, passed 19287 (27.2%)
+2026-01-09 09:21:30,571 - filter_pipeline - INFO - Processed 72000 sentences, passed 19287 (26.8%)
+2026-01-09 09:21:32,088 - filter_pipeline - INFO - Processed 73000 sentences, passed 19287 (26.4%)
+2026-01-09 09:21:33,545 - filter_pipeline - INFO - Processed 74000 sentences, passed 19287 (26.1%)
+2026-01-09 09:21:34,708 - filter_pipeline - INFO - Processed 75000 sentences, passed 19287 (25.7%)
+2026-01-09 09:21:35,780 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:21:36,047 - filter_pipeline - INFO - Processed 76000 sentences, passed 19287 (25.4%)
+2026-01-09 09:21:36,388 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:21:37,206 - filter_pipeline - INFO - Processed 77000 sentences, passed 19287 (25.0%)
+2026-01-09 09:21:38,800 - filter_pipeline - INFO - Processed 78000 sentences, passed 19287 (24.7%)
+2026-01-09 09:21:40,187 - filter_pipeline - INFO - Processed 79000 sentences, passed 19287 (24.4%)
+2026-01-09 09:21:41,350 - filter_pipeline - INFO - Processed 80000 sentences, passed 19287 (24.1%)
+2026-01-09 09:21:42,676 - filter_pipeline - INFO - Processed 81000 sentences, passed 19287 (23.8%)
+2026-01-09 09:21:44,041 - filter_pipeline - INFO - Processed 82000 sentences, passed 19287 (23.5%)
+2026-01-09 09:21:45,488 - filter_pipeline - INFO - Processed 83000 sentences, passed 19287 (23.2%)
+2026-01-09 09:21:46,856 - filter_pipeline - INFO - Processed 84000 sentences, passed 19287 (23.0%)
+2026-01-09 09:21:47,202 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:21:48,256 - filter_pipeline - INFO - Processed 85000 sentences, passed 19287 (22.7%)
+2026-01-09 09:21:49,609 - filter_pipeline - INFO - Processed 86000 sentences, passed 19287 (22.4%)
+2026-01-09 09:21:51,038 - filter_pipeline - INFO - Processed 87000 sentences, passed 19287 (22.2%)
+2026-01-09 09:21:51,856 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:21:52,392 - filter_pipeline - INFO - Processed 88000 sentences, passed 19287 (21.9%)
+2026-01-09 09:21:53,601 - filter_pipeline - INFO - Processed 89000 sentences, passed 19287 (21.7%)
+2026-01-09 09:21:54,960 - filter_pipeline - INFO - Processed 90000 sentences, passed 19287 (21.4%)
+2026-01-09 09:21:56,287 - filter_pipeline - INFO - Processed 91000 sentences, passed 19287 (21.2%)
+2026-01-09 09:21:56,632 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:21:57,631 - filter_pipeline - INFO - Processed 92000 sentences, passed 19287 (21.0%)
+2026-01-09 09:21:58,968 - filter_pipeline - INFO - Processed 93000 sentences, passed 19287 (20.7%)
+2026-01-09 09:22:00,148 - filter_pipeline - INFO - Processed 94000 sentences, passed 19287 (20.5%)
+2026-01-09 09:22:01,293 - filter_pipeline - INFO - Processed 95000 sentences, passed 19287 (20.3%)
+2026-01-09 09:22:02,888 - filter_pipeline - INFO - Processed 96000 sentences, passed 19287 (20.1%)
+2026-01-09 09:22:04,487 - filter_pipeline - INFO - Processed 97000 sentences, passed 19287 (19.9%)
+2026-01-09 09:22:05,856 - filter_pipeline - INFO - Processed 98000 sentences, passed 19287 (19.7%)
+2026-01-09 09:22:06,327 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:22:07,161 - filter_pipeline - INFO - Processed 99000 sentences, passed 19287 (19.5%)
+2026-01-09 09:22:08,310 - filter_pipeline - INFO - Processed 100000 sentences, passed 19287 (19.3%)
+2026-01-09 09:22:09,482 - filter_pipeline - INFO - Processed 101000 sentences, passed 19287 (19.1%)
+2026-01-09 09:22:10,731 - filter_pipeline - INFO - Processed 102000 sentences, passed 19287 (18.9%)
+2026-01-09 09:22:12,038 - filter_pipeline - INFO - Processed 103000 sentences, passed 19287 (18.7%)
+2026-01-09 09:22:13,269 - filter_pipeline - INFO - Processed 104000 sentences, passed 19287 (18.5%)
+2026-01-09 09:22:14,456 - filter_pipeline - INFO - Processed 105000 sentences, passed 19287 (18.4%)
+2026-01-09 09:22:15,573 - filter_pipeline - INFO - Processed 106000 sentences, passed 19287 (18.2%)
+2026-01-09 09:22:16,862 - filter_pipeline - INFO - Processed 107000 sentences, passed 19287 (18.0%)
+2026-01-09 09:22:18,082 - filter_pipeline - INFO - Processed 108000 sentences, passed 19287 (17.9%)
+2026-01-09 09:22:19,245 - filter_pipeline - INFO - Processed 109000 sentences, passed 19287 (17.7%)
+2026-01-09 09:22:19,577 - filter_pipeline - WARNING - Language detection failed: No features in text.
+2026-01-09 09:22:20,422 - filter_pipeline - INFO - Processed 110000 sentences, passed 19287 (17.5%)
+2026-01-09 09:22:21,494 - filter_pipeline - INFO - Processed 111000 sentences, passed 19287 (17.4%)
+2026-01-09 09:22:22,829 - filter_pipeline - INFO - Processed 112000 sentences, passed 19287 (17.2%)
+2026-01-09 09:22:24,006 - filter_pipeline - INFO - Processed 113000 sentences, passed 19287 (17.1%)
+2026-01-09 09:22:25,311 - filter_pipeline - INFO - Processed 114000 sentences, passed 19287 (16.9%)
+2026-01-09 09:22:26,341 - filter_pipeline - INFO - Processed 115000 sentences, passed 19287 (16.8%)
+2026-01-09 09:22:27,546 - filter_pipeline - INFO - Processed 116000 sentences, passed 19287 (16.6%)
+2026-01-09 09:22:28,422 - filter_pipeline - INFO - 
+======================================================================
+2026-01-09 09:22:28,422 - filter_pipeline - INFO - FILTER PIPELINE STATISTICS
+2026-01-09 09:22:28,422 - filter_pipeline - INFO - ======================================================================
+2026-01-09 09:22:28,422 - filter_pipeline - INFO - Total input sentences: 116,650
+2026-01-09 09:22:28,422 - filter_pipeline - INFO - Total passed: 19,287 (16.5%)
+2026-01-09 09:22:28,427 - filter_pipeline - INFO - Total filtered: 97,363
+2026-01-09 09:22:28,427 - filter_pipeline - INFO - 
+Per-filter statistics:
+2026-01-09 09:22:28,429 - filter_pipeline - INFO - ----------------------------------------------------------------------
+2026-01-09 09:22:28,429 - filter_pipeline - INFO - Filter                         Input     Passed     Failed    Pass%
+2026-01-09 09:22:28,429 - filter_pipeline - INFO - ----------------------------------------------------------------------
+2026-01-09 09:22:28,431 - filter_pipeline - INFO - lang_detection               116,650     34,059     82,591    29.2%
+2026-01-09 09:22:28,432 - filter_pipeline - INFO - deduplication                 34,059     32,322      1,737    94.9%
+2026-01-09 09:22:28,433 - filter_pipeline - INFO - content_quality               32,322     31,509        813    97.5%
+2026-01-09 09:22:28,433 - filter_pipeline - INFO - length_ratio                  31,509     28,801      2,708    91.4%
+2026-01-09 09:22:28,433 - filter_pipeline - INFO - script_validation             28,801     28,655        146    99.5%
+2026-01-09 09:22:28,433 - filter_pipeline - INFO - repetition                    28,655     28,654          1   100.0%
+2026-01-09 09:22:28,433 - filter_pipeline - INFO - web_artifacts                 28,654     28,631         23    99.9%
+2026-01-09 09:22:28,433 - filter_pipeline - INFO - commercial_spam               28,631     28,384        247    99.1%
+2026-01-09 09:22:28,433 - filter_pipeline - INFO - fragments                     28,384     22,710      5,674    80.0%
+2026-01-09 09:22:28,433 - filter_pipeline - INFO - mt_artifacts                  22,710     22,710          0   100.0%
+2026-01-09 09:22:28,436 - filter_pipeline - INFO - token_ratio                   22,710     21,547      1,163    94.9%
+2026-01-09 09:22:28,436 - filter_pipeline - INFO - labse_similarity              21,547     19,287      2,260    89.5%
+2026-01-09 09:22:28,437 - filter_pipeline - INFO - ======================================================================
+
+2026-01-09 09:22:28,437 - filter_pipeline - INFO - 
+Filtered dataset saved to: data/processed/filtered_sentences.jsonl
+2026-01-09 09:22:28,439 - __main__ - INFO - Stage 4 complete.
+
+2026-01-09 09:22:28,439 - __main__ - INFO - 
+======================================================================
+2026-01-09 09:22:28,446 - __main__ - INFO - PIPELINE COMPLETE!
+2026-01-09 09:22:28,446 - __main__ - INFO - ======================================================================
+

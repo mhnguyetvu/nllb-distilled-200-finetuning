@@ -1,0 +1,900 @@
+2026-01-05 15:02:16,077 - __main__ - INFO - Logging initialized. Console + File: logs\align.log
+2026-01-05 15:02:16,077 - __main__ - INFO - 
+======================================================================
+2026-01-05 15:02:16,077 - __main__ - INFO - STAGE 3: SENTENCE ALIGNMENT
+2026-01-05 15:02:16,077 - __main__ - INFO - ======================================================================
+
+2026-01-05 15:02:16,085 - __main__ - ERROR - Error in stage 'align': 'input_file'
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 314, in run_alignment
+    run_alignment_stage(config)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 221, in run_alignment_stage
+    input_path = align_cfg["input_file"]
+                 ~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'input_file'
+2026-01-05 15:02:30,448 - __main__ - INFO - Logging initialized. Console + File: logs\align.log
+2026-01-05 15:02:30,448 - __main__ - INFO - 
+======================================================================
+2026-01-05 15:02:30,448 - __main__ - INFO - STAGE 3: SENTENCE ALIGNMENT
+2026-01-05 15:02:30,448 - __main__ - INFO - ======================================================================
+
+2026-01-05 15:02:30,449 - __main__ - ERROR - Error in stage 'align': 'input_file'
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 314, in run_alignment
+    run_alignment_stage(config)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 221, in run_alignment_stage
+    input_path = align_cfg["input_file"]
+                 ~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'input_file'
+2026-01-05 15:02:43,265 - __main__ - INFO - Logging initialized. Console + File: logs\align.log
+2026-01-05 15:02:43,265 - __main__ - INFO - 
+======================================================================
+2026-01-05 15:02:43,266 - __main__ - INFO - STAGE 3: SENTENCE ALIGNMENT
+2026-01-05 15:02:43,266 - __main__ - INFO - ======================================================================
+
+2026-01-05 15:02:43,267 - sentence_align - INFO - Loading clean document pairs from: data/processed/clean_documents.jsonl
+2026-01-05 15:02:43,279 - sentence_align - INFO - Loaded 7 document pairs
+2026-01-05 15:02:43,279 - sentence_align - INFO - Loading sentence-transformer model: sentence-transformers/LaBSE
+2026-01-05 15:02:43,280 - __main__ - ERROR - Error in stage 'align': No module named 'sentence_transformers'
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 314, in run_alignment
+    run_alignment_stage(config)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 236, in run_alignment_stage
+    from sentence_transformers import SentenceTransformer
+ModuleNotFoundError: No module named 'sentence_transformers'
+2026-01-05 15:12:33,771 - __main__ - INFO - Logging initialized. Console + File: logs\align.log
+2026-01-05 15:12:33,772 - __main__ - INFO - 
+======================================================================
+2026-01-05 15:12:33,772 - __main__ - INFO - STAGE 3: SENTENCE ALIGNMENT
+2026-01-05 15:12:33,772 - __main__ - INFO - ======================================================================
+
+2026-01-05 15:12:33,774 - sentence_align - INFO - Loading clean document pairs from: data/processed/clean_documents.jsonl
+2026-01-05 15:12:33,777 - sentence_align - INFO - Loaded 7 document pairs
+2026-01-05 15:12:33,777 - sentence_align - INFO - Loading sentence-transformer model: sentence-transformers/LaBSE
+2026-01-05 15:13:16,624 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-05 15:13:16,635 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/LaBSE
+2026-01-05 15:14:01,911 - sentence_align - WARNING - [KSS] Failed, fallback regex: No module named 'kss'
+2026-01-05 15:14:10,026 - sentence_align - WARNING - [KSS] Failed, fallback regex: No module named 'kss'
+2026-01-05 15:14:11,664 - sentence_align - WARNING - [KSS] Failed, fallback regex: No module named 'kss'
+2026-01-05 15:14:12,087 - sentence_align - WARNING - [KSS] Failed, fallback regex: No module named 'kss'
+2026-01-05 15:14:16,974 - sentence_align - WARNING - [KSS] Failed, fallback regex: No module named 'kss'
+2026-01-05 15:14:17,465 - sentence_align - WARNING - [KSS] Failed, fallback regex: No module named 'kss'
+2026-01-05 15:14:18,805 - sentence_align - WARNING - [KSS] Failed, fallback regex: No module named 'kss'
+2026-01-05 15:14:19,644 - sentence_align - INFO - Saved 103 aligned sentence pairs to data/processed/aligned_sentences.jsonl
+2026-01-05 15:14:19,644 - __main__ - INFO - Stage 3 complete.
+
+2026-01-05 15:14:19,645 - __main__ - INFO - 
+======================================================================
+2026-01-05 15:14:19,645 - __main__ - INFO - PIPELINE COMPLETE!
+2026-01-05 15:14:19,645 - __main__ - INFO - ======================================================================
+
+2026-01-08 09:04:44,488 - __main__ - INFO - Logging initialized. Console + File: logs\align.log
+2026-01-08 09:04:44,488 - __main__ - INFO - 
+======================================================================
+2026-01-08 09:04:44,488 - __main__ - INFO - STAGE 3: SENTENCE ALIGNMENT
+2026-01-08 09:04:44,489 - __main__ - INFO - ======================================================================
+
+2026-01-08 09:04:44,508 - __main__ - ERROR - Error in stage 'align': f-string: single '}' is not allowed (sentence_align.py, line 299)
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 313, in run_alignment
+    from sentence_align import run_alignment_stage
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 299
+    logger.info(f"Total time: {elapsed_total/60:.1f} minutes ({elapsed_total/len(docs):.2f} sec/doc)aligned}")
+                                                                                                           ^
+SyntaxError: f-string: single '}' is not allowed
+2026-01-08 10:29:51,746 - __main__ - INFO - Logging initialized. Console + File: logs\align.log
+2026-01-08 10:29:51,747 - __main__ - INFO - 
+======================================================================
+2026-01-08 10:29:51,747 - __main__ - INFO - STAGE 3: SENTENCE ALIGNMENT
+2026-01-08 10:29:51,748 - __main__ - INFO - ======================================================================
+
+2026-01-08 10:29:51,757 - __main__ - ERROR - Error in stage 'align': unexpected indent (sentence_align.py, line 300)
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 313, in run_alignment
+    from sentence_align import run_alignment_stage
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 300
+    continue
+IndentationError: unexpected indent
+2026-01-08 10:31:18,736 - __main__ - INFO - Logging initialized. Console + File: logs\align.log
+2026-01-08 10:31:18,737 - __main__ - INFO - 
+======================================================================
+2026-01-08 10:31:18,737 - __main__ - INFO - STAGE 3: SENTENCE ALIGNMENT
+2026-01-08 10:31:18,737 - __main__ - INFO - ======================================================================
+
+2026-01-08 10:31:18,743 - sentence_align - INFO - Loading clean document pairs from: data/processed/clean_documents.jsonl
+2026-01-08 10:31:18,997 - sentence_align - INFO - Loaded 2427 document pairs
+2026-01-08 10:31:18,998 - sentence_align - INFO - Loading sentence-transformer model: sentence-transformers/LaBSE
+2026-01-08 10:32:22,642 - sentence_align - INFO - Using device: cuda
+2026-01-08 10:32:22,649 - sentence_align - INFO - GPU: GeForce RTX 3050 Ti Laptop GPU
+2026-01-08 10:32:22,649 - sentence_align - INFO - GPU Memory: 4.3 GB
+2026-01-08 10:32:22,651 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/LaBSE
+2026-01-08 10:32:44,975 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-01-08 10:33:02,931 - Kss - WARNING - Because there's no supported C++ morpheme analyzer, Kss will take pecab as a backend. :D
+For your information, Kss also supports mecab backend.
+We recommend you to install mecab or konlpy.tag.Mecab for faster execution of Kss.
+Please refer to following web sites for details:
+- mecab: https://cleancode-ws.tistory.com/97
+- konlpy.tag.Mecab: https://uwgdqo.tistory.com/363
+
+2026-01-08 10:33:37,567 - sentence_align - WARNING - Failed aligning doc pair 1: cannot access local variable 'total_aligned' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 284, in run_alignment_stage
+    total_aligned += len(aligned)
+    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'total_aligned' where it is not associated with a value
+2026-01-08 10:33:38,815 - sentence_align - WARNING - Failed aligning doc pair 2: cannot access local variable 'total_aligned' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 284, in run_alignment_stage
+    total_aligned += len(aligned)
+    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'total_aligned' where it is not associated with a value
+2026-01-08 10:33:39,067 - sentence_align - WARNING - Failed aligning doc pair 3: cannot access local variable 'total_aligned' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 284, in run_alignment_stage
+    total_aligned += len(aligned)
+    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'total_aligned' where it is not associated with a value
+2026-01-08 10:33:49,442 - sentence_align - WARNING - Failed aligning doc pair 4: cannot access local variable 'total_aligned' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 284, in run_alignment_stage
+    total_aligned += len(aligned)
+    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'total_aligned' where it is not associated with a value
+2026-01-08 10:33:49,825 - sentence_align - WARNING - Failed aligning doc pair 5: cannot access local variable 'total_aligned' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 284, in run_alignment_stage
+    total_aligned += len(aligned)
+    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'total_aligned' where it is not associated with a value
+2026-01-08 10:33:51,341 - sentence_align - WARNING - Failed aligning doc pair 6: cannot access local variable 'total_aligned' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 284, in run_alignment_stage
+    total_aligned += len(aligned)
+    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'total_aligned' where it is not associated with a value
+2026-01-08 10:33:51,683 - sentence_align - WARNING - Failed aligning doc pair 7: cannot access local variable 'total_aligned' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 284, in run_alignment_stage
+    total_aligned += len(aligned)
+    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'total_aligned' where it is not associated with a value
+2026-01-08 10:34:00,124 - sentence_align - WARNING - Failed aligning doc pair 8: cannot access local variable 'total_aligned' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 284, in run_alignment_stage
+    total_aligned += len(aligned)
+    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'total_aligned' where it is not associated with a value
+2026-01-08 10:34:12,985 - sentence_align - WARNING - Failed aligning doc pair 9: cannot access local variable 'total_aligned' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 284, in run_alignment_stage
+    total_aligned += len(aligned)
+    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'total_aligned' where it is not associated with a value
+2026-01-08 10:34:16,363 - sentence_align - WARNING - Failed aligning doc pair 10: cannot access local variable 'total_aligned' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 284, in run_alignment_stage
+    total_aligned += len(aligned)
+    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'total_aligned' where it is not associated with a value
+2026-01-08 10:34:20,618 - sentence_align - WARNING - Failed aligning doc pair 11: cannot access local variable 'total_aligned' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 284, in run_alignment_stage
+    total_aligned += len(aligned)
+    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'total_aligned' where it is not associated with a value
+2026-01-08 10:37:36,999 - __main__ - INFO - Logging initialized. Console + File: logs\align.log
+2026-01-08 10:37:37,001 - __main__ - INFO - 
+======================================================================
+2026-01-08 10:37:37,002 - __main__ - INFO - STAGE 3: SENTENCE ALIGNMENT
+2026-01-08 10:37:37,002 - __main__ - INFO - ======================================================================
+
+2026-01-08 10:37:37,007 - sentence_align - INFO - Loading clean document pairs from: data/processed/clean_documents.jsonl
+2026-01-08 10:37:37,311 - sentence_align - INFO - Loaded 2427 document pairs
+2026-01-08 10:37:37,311 - sentence_align - INFO - Loading sentence-transformer model: sentence-transformers/LaBSE
+2026-01-08 10:37:53,273 - sentence_align - INFO - Using device: cuda
+2026-01-08 10:37:53,279 - sentence_align - INFO - GPU: GeForce RTX 3050 Ti Laptop GPU
+2026-01-08 10:37:53,280 - sentence_align - INFO - GPU Memory: 4.3 GB
+2026-01-08 10:37:53,282 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/LaBSE
+2026-01-08 10:38:06,950 - sentence_align - INFO - Enabled FP16 (half precision) for faster GPU inference
+2026-01-08 10:38:17,043 - Kss - WARNING - Because there's no supported C++ morpheme analyzer, Kss will take pecab as a backend. :D
+For your information, Kss also supports mecab backend.
+We recommend you to install mecab or konlpy.tag.Mecab for faster execution of Kss.
+Please refer to following web sites for details:
+- mecab: https://cleancode-ws.tistory.com/97
+- konlpy.tag.Mecab: https://uwgdqo.tistory.com/363
+
+2026-01-08 10:38:41,844 - sentence_align - WARNING - Failed aligning doc pair 1: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)`
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 287, in run_alignment_stage
+    aligned = align_document_pair(doc, model, align_cfg)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 197, in align_document_pair
+    ko_emb = model.encode(
+             ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\SentenceTransformer.py", line 685, in encode
+    out_features = self.forward(features, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\SentenceTransformer.py", line 758, in forward
+    input = module(input, **module_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\models\Transformer.py", line 442, in forward
+    outputs = self.auto_model(**trans_features, **kwargs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 996, in forward
+    encoder_outputs = self.encoder(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 651, in forward
+    layer_outputs = layer_module(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\modeling_layers.py", line 83, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 553, in forward
+    self_attention_outputs = self.attention(
+                             ^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 483, in forward
+    self_outputs = self.self(
+                   ^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 363, in forward
+    query_layer = self.transpose_for_scores(self.query(hidden_states))
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)`
+2026-01-08 10:38:43,568 - sentence_align - WARNING - Failed aligning doc pair 2: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)`
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 287, in run_alignment_stage
+    aligned = align_document_pair(doc, model, align_cfg)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 197, in align_document_pair
+    ko_emb = model.encode(
+             ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\SentenceTransformer.py", line 685, in encode
+    out_features = self.forward(features, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\SentenceTransformer.py", line 758, in forward
+    input = module(input, **module_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\models\Transformer.py", line 442, in forward
+    outputs = self.auto_model(**trans_features, **kwargs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 996, in forward
+    encoder_outputs = self.encoder(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 651, in forward
+    layer_outputs = layer_module(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\modeling_layers.py", line 83, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 553, in forward
+    self_attention_outputs = self.attention(
+                             ^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 483, in forward
+    self_outputs = self.self(
+                   ^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 363, in forward
+    query_layer = self.transpose_for_scores(self.query(hidden_states))
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)`
+2026-01-08 10:38:43,793 - sentence_align - WARNING - Failed aligning doc pair 3: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)`
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 287, in run_alignment_stage
+    aligned = align_document_pair(doc, model, align_cfg)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 197, in align_document_pair
+    ko_emb = model.encode(
+             ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\SentenceTransformer.py", line 685, in encode
+    out_features = self.forward(features, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\SentenceTransformer.py", line 758, in forward
+    input = module(input, **module_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\models\Transformer.py", line 442, in forward
+    outputs = self.auto_model(**trans_features, **kwargs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 996, in forward
+    encoder_outputs = self.encoder(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 651, in forward
+    layer_outputs = layer_module(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\modeling_layers.py", line 83, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 553, in forward
+    self_attention_outputs = self.attention(
+                             ^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 483, in forward
+    self_outputs = self.self(
+                   ^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 363, in forward
+    query_layer = self.transpose_for_scores(self.query(hidden_states))
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)`
+2026-01-08 10:38:46,994 - sentence_align - WARNING - Failed aligning doc pair 4: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)`
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 287, in run_alignment_stage
+    aligned = align_document_pair(doc, model, align_cfg)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 197, in align_document_pair
+    ko_emb = model.encode(
+             ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\SentenceTransformer.py", line 685, in encode
+    out_features = self.forward(features, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\SentenceTransformer.py", line 758, in forward
+    input = module(input, **module_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\models\Transformer.py", line 442, in forward
+    outputs = self.auto_model(**trans_features, **kwargs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 996, in forward
+    encoder_outputs = self.encoder(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 651, in forward
+    layer_outputs = layer_module(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\modeling_layers.py", line 83, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 553, in forward
+    self_attention_outputs = self.attention(
+                             ^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 483, in forward
+    self_outputs = self.self(
+                   ^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 363, in forward
+    query_layer = self.transpose_for_scores(self.query(hidden_states))
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)`
+2026-01-08 10:38:47,322 - sentence_align - WARNING - Failed aligning doc pair 5: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)`
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 287, in run_alignment_stage
+    aligned = align_document_pair(doc, model, align_cfg)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\sentence_align.py", line 197, in align_document_pair
+    ko_emb = model.encode(
+             ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\SentenceTransformer.py", line 685, in encode
+    out_features = self.forward(features, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\SentenceTransformer.py", line 758, in forward
+    input = module(input, **module_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\sentence_transformers\models\Transformer.py", line 442, in forward
+    outputs = self.auto_model(**trans_features, **kwargs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 996, in forward
+    encoder_outputs = self.encoder(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 651, in forward
+    layer_outputs = layer_module(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\modeling_layers.py", line 83, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 553, in forward
+    self_attention_outputs = self.attention(
+                             ^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 483, in forward
+    self_outputs = self.self(
+                   ^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Roaming\Python\Python311\site-packages\transformers\models\bert\modeling_bert.py", line 363, in forward
+    query_layer = self.transpose_for_scores(self.query(hidden_states))
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\torch\nn\modules\linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)`
+2026-01-08 10:41:33,082 - __main__ - INFO - Logging initialized. Console + File: logs\align.log
+2026-01-08 10:41:33,083 - __main__ - INFO - 
+======================================================================
+2026-01-08 10:41:33,084 - __main__ - INFO - STAGE 3: SENTENCE ALIGNMENT
+2026-01-08 10:41:33,084 - __main__ - INFO - ======================================================================
+
+2026-01-08 10:41:33,091 - sentence_align - INFO - Loading clean document pairs from: data/processed/clean_documents.jsonl
+2026-01-08 10:41:33,409 - sentence_align - INFO - Loaded 2427 document pairs
+2026-01-08 10:41:33,409 - sentence_align - INFO - Loading sentence-transformer model: sentence-transformers/LaBSE
+2026-01-08 10:41:52,101 - sentence_align - INFO - Using device: cuda
+2026-01-08 10:41:52,111 - sentence_align - INFO - GPU: GeForce RTX 3050 Ti Laptop GPU
+2026-01-08 10:41:52,112 - sentence_align - INFO - GPU Memory: 4.3 GB
+2026-01-08 10:41:52,114 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/LaBSE
+2026-01-08 10:42:17,773 - sentence_align - INFO - Using FP32 (full precision) for GPU stability
+2026-01-08 10:42:17,791 - sentence_align - INFO - GPU Memory: 1.89GB allocated, 1.94GB reserved
+2026-01-08 10:42:29,290 - Kss - WARNING - Because there's no supported C++ morpheme analyzer, Kss will take pecab as a backend. :D
+For your information, Kss also supports mecab backend.
+We recommend you to install mecab or konlpy.tag.Mecab for faster execution of Kss.
+Please refer to following web sites for details:
+- mecab: https://cleancode-ws.tistory.com/97
+- konlpy.tag.Mecab: https://uwgdqo.tistory.com/363
+
+2026-01-08 10:43:22,853 - sentence_align - INFO - [10/2427] aligned_sentences=140 | Speed: 0.2 docs/sec | ETA: 262.0 min | GPU: 1.9GB
+2026-01-08 10:44:58,594 - sentence_align - INFO - [20/2427] aligned_sentences=617 | Speed: 0.1 docs/sec | ETA: 322.5 min | GPU: 1.9GB
+2026-01-08 10:45:52,058 - sentence_align - INFO - [30/2427] aligned_sentences=1076 | Speed: 0.1 docs/sec | ETA: 285.3 min | GPU: 1.9GB
+2026-01-08 10:46:09,529 - sentence_align - INFO - [40/2427] aligned_sentences=1362 | Speed: 0.2 docs/sec | ETA: 230.5 min | GPU: 1.9GB
+2026-01-08 10:48:31,050 - sentence_align - INFO - [50/2427] aligned_sentences=1686 | Speed: 0.1 docs/sec | ETA: 295.7 min | GPU: 1.9GB
+2026-01-08 10:49:13,673 - sentence_align - INFO - [60/2427] aligned_sentences=2222 | Speed: 0.1 docs/sec | ETA: 273.4 min | GPU: 1.9GB
+2026-01-08 10:49:43,775 - sentence_align - INFO - [70/2427] aligned_sentences=2873 | Speed: 0.2 docs/sec | ETA: 250.3 min | GPU: 1.9GB
+2026-01-08 10:49:50,898 - sentence_align - INFO - [80/2427] aligned_sentences=3192 | Speed: 0.2 docs/sec | ETA: 221.5 min | GPU: 1.9GB
+2026-01-08 10:49:53,056 - sentence_align - INFO - [90/2427] aligned_sentences=3447 | Speed: 0.2 docs/sec | ETA: 197.0 min | GPU: 1.9GB
+2026-01-08 10:50:32,323 - sentence_align - INFO - [100/2427] aligned_sentences=4977 | Speed: 0.2 docs/sec | ETA: 191.8 min | GPU: 1.9GB
+2026-01-08 10:50:43,198 - sentence_align - INFO - [110/2427] aligned_sentences=6018 | Speed: 0.2 docs/sec | ETA: 177.4 min | GPU: 1.9GB
+2026-01-08 10:50:57,899 - sentence_align - INFO - [120/2427] aligned_sentences=7289 | Speed: 0.2 docs/sec | ETA: 166.7 min | GPU: 1.9GB
+2026-01-08 10:51:09,318 - sentence_align - INFO - [130/2427] aligned_sentences=8332 | Speed: 0.2 docs/sec | ETA: 156.5 min | GPU: 1.9GB
+2026-01-08 10:55:20,840 - sentence_align - INFO - [140/2427] aligned_sentences=8445 | Speed: 0.2 docs/sec | ETA: 213.2 min | GPU: 1.9GB
+2026-01-08 15:55:59,885 - sentence_align - INFO - [150/2427] aligned_sentences=8587 | Speed: 0.0 docs/sec | ETA: 4762.0 min | GPU: 1.9GB
+2026-01-09 01:52:06,434 - sentence_align - INFO - [160/2427] aligned_sentences=8823 | Speed: 0.0 docs/sec | ETA: 12890.9 min | GPU: 1.9GB
+2026-01-09 01:52:42,440 - sentence_align - INFO - [170/2427] aligned_sentences=8912 | Speed: 0.0 docs/sec | ETA: 12087.0 min | GPU: 1.9GB
+2026-01-09 01:53:25,251 - sentence_align - INFO - [180/2427] aligned_sentences=9114 | Speed: 0.0 docs/sec | ETA: 11373.9 min | GPU: 1.9GB
+2026-01-09 01:53:37,041 - sentence_align - INFO - [190/2427] aligned_sentences=9282 | Speed: 0.0 docs/sec | ETA: 10729.6 min | GPU: 1.9GB
+2026-01-09 01:53:45,241 - sentence_align - INFO - [200/2427] aligned_sentences=9482 | Speed: 0.0 docs/sec | ETA: 10149.1 min | GPU: 1.9GB
+2026-01-09 01:54:02,881 - sentence_align - INFO - [210/2427] aligned_sentences=9676 | Speed: 0.0 docs/sec | ETA: 9625.5 min | GPU: 1.9GB
+2026-01-09 01:54:23,825 - sentence_align - INFO - [220/2427] aligned_sentences=9903 | Speed: 0.0 docs/sec | ETA: 9150.0 min | GPU: 1.9GB
+2026-01-09 01:55:02,241 - sentence_align - INFO - [230/2427] aligned_sentences=10228 | Speed: 0.0 docs/sec | ETA: 8718.7 min | GPU: 1.9GB
+2026-01-09 01:55:20,235 - sentence_align - INFO - [240/2427] aligned_sentences=10451 | Speed: 0.0 docs/sec | ETA: 8320.1 min | GPU: 1.9GB
+2026-01-09 01:55:44,615 - sentence_align - INFO - [250/2427] aligned_sentences=10717 | Speed: 0.0 docs/sec | ETA: 7954.3 min | GPU: 1.9GB
+2026-01-09 01:56:00,092 - sentence_align - INFO - [260/2427] aligned_sentences=10917 | Speed: 0.0 docs/sec | ETA: 7615.4 min | GPU: 1.9GB
+2026-01-09 01:56:29,329 - sentence_align - INFO - [270/2427] aligned_sentences=11190 | Speed: 0.0 docs/sec | ETA: 7303.4 min | GPU: 1.9GB
+2026-01-09 01:56:54,261 - sentence_align - INFO - [280/2427] aligned_sentences=11443 | Speed: 0.0 docs/sec | ETA: 7013.1 min | GPU: 1.9GB
+2026-01-09 01:57:15,722 - sentence_align - INFO - [290/2427] aligned_sentences=11657 | Speed: 0.0 docs/sec | ETA: 6742.3 min | GPU: 1.9GB
+2026-01-09 01:57:30,174 - sentence_align - INFO - [300/2427] aligned_sentences=11815 | Speed: 0.0 docs/sec | ETA: 6488.8 min | GPU: 1.9GB
+2026-01-09 01:57:43,399 - sentence_align - INFO - [310/2427] aligned_sentences=11961 | Speed: 0.0 docs/sec | ETA: 6251.5 min | GPU: 1.9GB
+2026-01-09 01:58:00,733 - sentence_align - INFO - [320/2427] aligned_sentences=12127 | Speed: 0.0 docs/sec | ETA: 6029.4 min | GPU: 1.9GB
+2026-01-09 01:58:22,235 - sentence_align - INFO - [330/2427] aligned_sentences=12358 | Speed: 0.0 docs/sec | ETA: 5821.2 min | GPU: 1.9GB
+2026-01-09 01:58:46,577 - sentence_align - INFO - [340/2427] aligned_sentences=12631 | Speed: 0.0 docs/sec | ETA: 5625.6 min | GPU: 1.9GB
+2026-01-09 01:59:09,894 - sentence_align - INFO - [350/2427] aligned_sentences=12828 | Speed: 0.0 docs/sec | ETA: 5441.0 min | GPU: 1.9GB
+2026-01-09 01:59:34,175 - sentence_align - INFO - [360/2427] aligned_sentences=13052 | Speed: 0.0 docs/sec | ETA: 5266.7 min | GPU: 1.9GB
+2026-01-09 01:59:54,070 - sentence_align - INFO - [370/2427] aligned_sentences=13254 | Speed: 0.0 docs/sec | ETA: 5101.4 min | GPU: 1.9GB
+2026-01-09 02:00:04,770 - sentence_align - INFO - [380/2427] aligned_sentences=13394 | Speed: 0.0 docs/sec | ETA: 4944.0 min | GPU: 1.9GB
+2026-01-09 02:00:29,975 - sentence_align - INFO - [390/2427] aligned_sentences=13655 | Speed: 0.0 docs/sec | ETA: 4795.8 min | GPU: 1.9GB
+2026-01-09 02:00:57,613 - sentence_align - INFO - [400/2427] aligned_sentences=13897 | Speed: 0.0 docs/sec | ETA: 4655.3 min | GPU: 1.9GB
+2026-01-09 02:01:23,341 - sentence_align - INFO - [410/2427] aligned_sentences=14131 | Speed: 0.0 docs/sec | ETA: 4521.5 min | GPU: 1.9GB
+2026-01-09 02:01:56,947 - sentence_align - INFO - [420/2427] aligned_sentences=14410 | Speed: 0.0 docs/sec | ETA: 4394.6 min | GPU: 1.9GB
+2026-01-09 02:02:21,421 - sentence_align - INFO - [430/2427] aligned_sentences=14657 | Speed: 0.0 docs/sec | ETA: 4272.9 min | GPU: 1.9GB
+2026-01-09 02:02:45,657 - sentence_align - INFO - [440/2427] aligned_sentences=14903 | Speed: 0.0 docs/sec | ETA: 4156.7 min | GPU: 1.9GB
+2026-01-09 02:02:58,085 - sentence_align - INFO - [450/2427] aligned_sentences=15164 | Speed: 0.0 docs/sec | ETA: 4044.8 min | GPU: 1.9GB
+2026-01-09 02:03:21,869 - sentence_align - INFO - [460/2427] aligned_sentences=15452 | Speed: 0.0 docs/sec | ETA: 3938.6 min | GPU: 1.9GB
+2026-01-09 02:03:55,548 - sentence_align - INFO - [470/2427] aligned_sentences=15849 | Speed: 0.0 docs/sec | ETA: 3837.5 min | GPU: 1.9GB
+2026-01-09 02:04:25,847 - sentence_align - INFO - [480/2427] aligned_sentences=16220 | Speed: 0.0 docs/sec | ETA: 3740.4 min | GPU: 1.9GB
+2026-01-09 02:04:56,493 - sentence_align - INFO - [490/2427] aligned_sentences=16548 | Speed: 0.0 docs/sec | ETA: 3647.3 min | GPU: 1.9GB
+2026-01-09 02:05:42,266 - sentence_align - INFO - [500/2427] aligned_sentences=17014 | Speed: 0.0 docs/sec | ETA: 3558.8 min | GPU: 1.9GB
+2026-01-09 02:06:02,937 - sentence_align - INFO - [510/2427] aligned_sentences=17255 | Speed: 0.0 docs/sec | ETA: 3472.2 min | GPU: 1.9GB
+2026-01-09 02:06:23,055 - sentence_align - INFO - [520/2427] aligned_sentences=17565 | Speed: 0.0 docs/sec | ETA: 3388.9 min | GPU: 1.9GB
+2026-01-09 02:06:52,198 - sentence_align - INFO - [530/2427] aligned_sentences=17910 | Speed: 0.0 docs/sec | ETA: 3309.3 min | GPU: 1.9GB
+2026-01-09 02:07:06,982 - sentence_align - INFO - [540/2427] aligned_sentences=18074 | Speed: 0.0 docs/sec | ETA: 3231.7 min | GPU: 1.9GB
+2026-01-09 02:07:50,471 - sentence_align - INFO - [550/2427] aligned_sentences=18473 | Speed: 0.0 docs/sec | ETA: 3158.6 min | GPU: 1.9GB
+2026-01-09 02:08:19,148 - sentence_align - INFO - [560/2427] aligned_sentences=18734 | Speed: 0.0 docs/sec | ETA: 3087.3 min | GPU: 1.9GB
+2026-01-09 02:08:39,841 - sentence_align - INFO - [570/2427] aligned_sentences=19077 | Speed: 0.0 docs/sec | ETA: 3018.0 min | GPU: 1.9GB
+2026-01-09 02:08:56,448 - sentence_align - INFO - [580/2427] aligned_sentences=19311 | Speed: 0.0 docs/sec | ETA: 2950.9 min | GPU: 1.9GB
+2026-01-09 02:09:27,749 - sentence_align - INFO - [590/2427] aligned_sentences=19656 | Speed: 0.0 docs/sec | ETA: 2886.8 min | GPU: 1.9GB
+2026-01-09 02:09:41,689 - sentence_align - INFO - [600/2427] aligned_sentences=19912 | Speed: 0.0 docs/sec | ETA: 2823.9 min | GPU: 1.9GB
+2026-01-09 02:10:04,071 - sentence_align - INFO - [610/2427] aligned_sentences=20159 | Speed: 0.0 docs/sec | ETA: 2763.5 min | GPU: 1.9GB
+2026-01-09 02:10:43,959 - sentence_align - INFO - [620/2427] aligned_sentences=20595 | Speed: 0.0 docs/sec | ETA: 2705.9 min | GPU: 1.9GB
+2026-01-09 02:11:28,750 - sentence_align - INFO - [630/2427] aligned_sentences=20901 | Speed: 0.0 docs/sec | ETA: 2650.4 min | GPU: 1.9GB
+2026-01-09 02:11:53,662 - sentence_align - INFO - [640/2427] aligned_sentences=21188 | Speed: 0.0 docs/sec | ETA: 2595.6 min | GPU: 1.9GB
+2026-01-09 02:12:18,484 - sentence_align - INFO - [650/2427] aligned_sentences=21506 | Speed: 0.0 docs/sec | ETA: 2542.5 min | GPU: 1.9GB
+2026-01-09 02:12:44,035 - sentence_align - INFO - [660/2427] aligned_sentences=21863 | Speed: 0.0 docs/sec | ETA: 2491.0 min | GPU: 1.9GB
+2026-01-09 02:13:09,051 - sentence_align - INFO - [670/2427] aligned_sentences=22142 | Speed: 0.0 docs/sec | ETA: 2441.1 min | GPU: 1.9GB
+2026-01-09 02:13:36,194 - sentence_align - INFO - [680/2427] aligned_sentences=22477 | Speed: 0.0 docs/sec | ETA: 2392.6 min | GPU: 1.9GB
+2026-01-09 02:14:08,762 - sentence_align - INFO - [690/2427] aligned_sentences=22847 | Speed: 0.0 docs/sec | ETA: 2345.8 min | GPU: 1.9GB
+2026-01-09 02:14:53,475 - sentence_align - INFO - [700/2427] aligned_sentences=23298 | Speed: 0.0 docs/sec | ETA: 2300.8 min | GPU: 1.9GB
+2026-01-09 02:15:01,685 - sentence_align - INFO - [710/2427] aligned_sentences=23528 | Speed: 0.0 docs/sec | ETA: 2255.6 min | GPU: 1.9GB
+2026-01-09 02:16:32,021 - sentence_align - INFO - [720/2427] aligned_sentences=23736 | Speed: 0.0 docs/sec | ETA: 2214.9 min | GPU: 1.9GB
+2026-01-09 02:18:03,611 - sentence_align - INFO - [730/2427] aligned_sentences=23999 | Speed: 0.0 docs/sec | ETA: 2175.3 min | GPU: 1.9GB
+2026-01-09 02:19:24,209 - sentence_align - INFO - [740/2427] aligned_sentences=24268 | Speed: 0.0 docs/sec | ETA: 2136.4 min | GPU: 1.9GB
+2026-01-09 02:20:25,129 - sentence_align - INFO - [750/2427] aligned_sentences=24524 | Speed: 0.0 docs/sec | ETA: 2097.6 min | GPU: 1.9GB
+2026-01-09 02:21:04,964 - sentence_align - INFO - [760/2427] aligned_sentences=24804 | Speed: 0.0 docs/sec | ETA: 2059.2 min | GPU: 1.9GB
+2026-01-09 02:21:50,675 - sentence_align - INFO - [770/2427] aligned_sentences=25142 | Speed: 0.0 docs/sec | ETA: 2021.9 min | GPU: 1.9GB
+2026-01-09 02:23:14,375 - sentence_align - INFO - [780/2427] aligned_sentences=25385 | Speed: 0.0 docs/sec | ETA: 1986.8 min | GPU: 1.9GB
+2026-01-09 02:24:29,713 - sentence_align - INFO - [790/2427] aligned_sentences=25648 | Speed: 0.0 docs/sec | ETA: 1952.4 min | GPU: 1.9GB
+2026-01-09 02:26:20,848 - sentence_align - INFO - [800/2427] aligned_sentences=25866 | Speed: 0.0 docs/sec | ETA: 1920.0 min | GPU: 1.9GB
+2026-01-09 02:27:27,839 - sentence_align - INFO - [810/2427] aligned_sentences=26169 | Speed: 0.0 docs/sec | ETA: 1886.8 min | GPU: 1.9GB
+2026-01-09 02:29:15,657 - sentence_align - INFO - [820/2427] aligned_sentences=26335 | Speed: 0.0 docs/sec | ETA: 1855.8 min | GPU: 1.9GB
+2026-01-09 02:31:16,392 - sentence_align - INFO - [830/2427] aligned_sentences=26621 | Speed: 0.0 docs/sec | ETA: 1825.9 min | GPU: 1.9GB
+2026-01-09 02:33:13,262 - sentence_align - INFO - [840/2427] aligned_sentences=26751 | Speed: 0.0 docs/sec | ETA: 1796.6 min | GPU: 1.9GB
+2026-01-09 02:33:54,813 - sentence_align - INFO - [850/2427] aligned_sentences=27057 | Speed: 0.0 docs/sec | ETA: 1765.5 min | GPU: 1.9GB
+2026-01-09 02:34:13,996 - sentence_align - INFO - [860/2427] aligned_sentences=27193 | Speed: 0.0 docs/sec | ETA: 1734.5 min | GPU: 1.9GB
+2026-01-09 02:34:30,621 - sentence_align - INFO - [870/2427] aligned_sentences=27284 | Speed: 0.0 docs/sec | ETA: 1704.1 min | GPU: 1.9GB
+2026-01-09 02:35:05,452 - sentence_align - INFO - [880/2427] aligned_sentences=27577 | Speed: 0.0 docs/sec | ETA: 1675.0 min | GPU: 1.9GB
+2026-01-09 02:35:38,504 - sentence_align - INFO - [890/2427] aligned_sentences=27910 | Speed: 0.0 docs/sec | ETA: 1646.4 min | GPU: 1.9GB
+2026-01-09 02:36:04,410 - sentence_align - INFO - [900/2427] aligned_sentences=28124 | Speed: 0.0 docs/sec | ETA: 1618.2 min | GPU: 1.9GB
+2026-01-09 02:36:36,255 - sentence_align - INFO - [910/2427] aligned_sentences=28413 | Speed: 0.0 docs/sec | ETA: 1590.9 min | GPU: 1.9GB
+2026-01-09 02:38:34,650 - sentence_align - INFO - [920/2427] aligned_sentences=29260 | Speed: 0.0 docs/sec | ETA: 1566.4 min | GPU: 1.9GB
+2026-01-09 02:41:09,027 - sentence_align - INFO - [930/2427] aligned_sentences=29831 | Speed: 0.0 docs/sec | ETA: 1543.4 min | GPU: 1.9GB
+2026-01-09 02:43:48,675 - sentence_align - INFO - [940/2427] aligned_sentences=30968 | Speed: 0.0 docs/sec | ETA: 1521.0 min | GPU: 1.9GB
+2026-01-09 02:46:33,042 - sentence_align - INFO - [950/2427] aligned_sentences=31845 | Speed: 0.0 docs/sec | ETA: 1499.2 min | GPU: 1.9GB
+2026-01-09 02:48:10,224 - sentence_align - INFO - [960/2427] aligned_sentences=32505 | Speed: 0.0 docs/sec | ETA: 1476.0 min | GPU: 1.9GB
+2026-01-09 02:48:34,460 - sentence_align - INFO - [970/2427] aligned_sentences=32807 | Speed: 0.0 docs/sec | ETA: 1451.4 min | GPU: 1.9GB
+2026-01-09 02:48:45,754 - sentence_align - INFO - [980/2427] aligned_sentences=32962 | Speed: 0.0 docs/sec | ETA: 1427.0 min | GPU: 1.9GB
+2026-01-09 02:48:57,417 - sentence_align - INFO - [990/2427] aligned_sentences=33112 | Speed: 0.0 docs/sec | ETA: 1403.1 min | GPU: 1.9GB
+2026-01-09 02:49:07,871 - sentence_align - INFO - [1000/2427] aligned_sentences=33268 | Speed: 0.0 docs/sec | ETA: 1379.7 min | GPU: 1.9GB
+2026-01-09 02:49:18,321 - sentence_align - INFO - [1010/2427] aligned_sentences=33408 | Speed: 0.0 docs/sec | ETA: 1356.7 min | GPU: 1.9GB
+2026-01-09 02:49:29,121 - sentence_align - INFO - [1020/2427] aligned_sentences=33549 | Speed: 0.0 docs/sec | ETA: 1334.2 min | GPU: 1.9GB
+2026-01-09 02:49:42,954 - sentence_align - INFO - [1030/2427] aligned_sentences=33722 | Speed: 0.0 docs/sec | ETA: 1312.1 min | GPU: 1.9GB
+2026-01-09 02:50:02,091 - sentence_align - INFO - [1040/2427] aligned_sentences=33938 | Speed: 0.0 docs/sec | ETA: 1290.6 min | GPU: 1.9GB
+2026-01-09 02:50:17,003 - sentence_align - INFO - [1050/2427] aligned_sentences=34129 | Speed: 0.0 docs/sec | ETA: 1269.4 min | GPU: 1.9GB
+2026-01-09 02:50:48,227 - sentence_align - INFO - [1060/2427] aligned_sentences=34358 | Speed: 0.0 docs/sec | ETA: 1249.0 min | GPU: 1.9GB
+2026-01-09 02:51:39,672 - sentence_align - INFO - [1070/2427] aligned_sentences=34867 | Speed: 0.0 docs/sec | ETA: 1229.4 min | GPU: 1.9GB
+2026-01-09 02:52:22,981 - sentence_align - INFO - [1080/2427] aligned_sentences=35094 | Speed: 0.0 docs/sec | ETA: 1209.9 min | GPU: 1.9GB
+2026-01-09 02:52:48,123 - sentence_align - INFO - [1090/2427] aligned_sentences=35316 | Speed: 0.0 docs/sec | ETA: 1190.4 min | GPU: 1.9GB
+2026-01-09 02:53:12,641 - sentence_align - INFO - [1100/2427] aligned_sentences=35436 | Speed: 0.0 docs/sec | ETA: 1171.3 min | GPU: 1.9GB
+2026-01-09 02:53:20,554 - sentence_align - INFO - [1110/2427] aligned_sentences=35530 | Speed: 0.0 docs/sec | ETA: 1152.1 min | GPU: 1.9GB
+2026-01-09 02:53:26,225 - sentence_align - INFO - [1120/2427] aligned_sentences=35605 | Speed: 0.0 docs/sec | ETA: 1133.3 min | GPU: 1.9GB
+2026-01-09 02:53:29,850 - sentence_align - INFO - [1130/2427] aligned_sentences=35648 | Speed: 0.0 docs/sec | ETA: 1114.7 min | GPU: 1.9GB
+2026-01-09 02:53:32,603 - sentence_align - INFO - [1140/2427] aligned_sentences=35689 | Speed: 0.0 docs/sec | ETA: 1096.5 min | GPU: 1.9GB
+2026-01-09 02:53:51,307 - sentence_align - INFO - [1150/2427] aligned_sentences=35959 | Speed: 0.0 docs/sec | ETA: 1078.9 min | GPU: 1.9GB
+2026-01-09 02:53:54,592 - sentence_align - INFO - [1160/2427] aligned_sentences=36012 | Speed: 0.0 docs/sec | ETA: 1061.2 min | GPU: 1.9GB
+2026-01-09 02:53:58,787 - sentence_align - INFO - [1170/2427] aligned_sentences=36061 | Speed: 0.0 docs/sec | ETA: 1043.9 min | GPU: 1.9GB
+2026-01-09 02:54:02,073 - sentence_align - INFO - [1180/2427] aligned_sentences=36104 | Speed: 0.0 docs/sec | ETA: 1026.9 min | GPU: 1.9GB
+2026-01-09 02:54:28,492 - sentence_align - INFO - [1190/2427] aligned_sentences=36305 | Speed: 0.0 docs/sec | ETA: 1010.6 min | GPU: 1.9GB
+2026-01-09 02:54:34,286 - sentence_align - INFO - [1200/2427] aligned_sentences=36368 | Speed: 0.0 docs/sec | ETA: 994.2 min | GPU: 1.9GB
+2026-01-09 02:55:27,397 - sentence_align - INFO - [1210/2427] aligned_sentences=36487 | Speed: 0.0 docs/sec | ETA: 978.8 min | GPU: 1.9GB
+2026-01-09 02:55:53,147 - sentence_align - INFO - [1220/2427] aligned_sentences=36719 | Speed: 0.0 docs/sec | ETA: 963.2 min | GPU: 1.9GB
+2026-01-09 02:56:02,415 - sentence_align - INFO - [1230/2427] aligned_sentences=36845 | Speed: 0.0 docs/sec | ETA: 947.6 min | GPU: 1.9GB
+2026-01-09 02:56:18,688 - sentence_align - INFO - [1240/2427] aligned_sentences=37022 | Speed: 0.0 docs/sec | ETA: 932.4 min | GPU: 1.9GB
+2026-01-09 02:56:42,098 - sentence_align - INFO - [1250/2427] aligned_sentences=37242 | Speed: 0.0 docs/sec | ETA: 917.5 min | GPU: 1.9GB
+2026-01-09 02:56:57,208 - sentence_align - INFO - [1260/2427] aligned_sentences=37451 | Speed: 0.0 docs/sec | ETA: 902.7 min | GPU: 1.9GB
+2026-01-09 02:57:09,438 - sentence_align - INFO - [1270/2427] aligned_sentences=37603 | Speed: 0.0 docs/sec | ETA: 888.1 min | GPU: 1.9GB
+2026-01-09 02:57:26,999 - sentence_align - INFO - [1280/2427] aligned_sentences=37800 | Speed: 0.0 docs/sec | ETA: 873.8 min | GPU: 1.9GB
+2026-01-09 02:57:50,930 - sentence_align - INFO - [1290/2427] aligned_sentences=38012 | Speed: 0.0 docs/sec | ETA: 859.8 min | GPU: 1.9GB
+2026-01-09 02:58:20,176 - sentence_align - INFO - [1300/2427] aligned_sentences=38377 | Speed: 0.0 docs/sec | ETA: 846.2 min | GPU: 1.9GB
+2026-01-09 02:59:01,317 - sentence_align - INFO - [1310/2427] aligned_sentences=38796 | Speed: 0.0 docs/sec | ETA: 832.8 min | GPU: 1.9GB
+2026-01-09 02:59:51,608 - sentence_align - INFO - [1320/2427] aligned_sentences=39322 | Speed: 0.0 docs/sec | ETA: 819.8 min | GPU: 1.9GB
+2026-01-09 03:00:32,278 - sentence_align - INFO - [1330/2427] aligned_sentences=39711 | Speed: 0.0 docs/sec | ETA: 806.9 min | GPU: 1.9GB
+2026-01-09 03:00:54,500 - sentence_align - INFO - [1340/2427] aligned_sentences=39976 | Speed: 0.0 docs/sec | ETA: 793.8 min | GPU: 1.9GB
+2026-01-09 03:01:18,577 - sentence_align - INFO - [1350/2427] aligned_sentences=40198 | Speed: 0.0 docs/sec | ETA: 781.0 min | GPU: 1.9GB
+2026-01-09 03:02:48,240 - sentence_align - INFO - [1360/2427] aligned_sentences=40579 | Speed: 0.0 docs/sec | ETA: 769.3 min | GPU: 1.9GB
+2026-01-09 03:03:37,018 - sentence_align - INFO - [1370/2427] aligned_sentences=40962 | Speed: 0.0 docs/sec | ETA: 757.1 min | GPU: 1.9GB
+2026-01-09 03:03:59,522 - sentence_align - INFO - [1380/2427] aligned_sentences=41198 | Speed: 0.0 docs/sec | ETA: 744.8 min | GPU: 1.9GB
+2026-01-09 03:04:10,641 - sentence_align - INFO - [1390/2427] aligned_sentences=41233 | Speed: 0.0 docs/sec | ETA: 732.5 min | GPU: 1.9GB
+2026-01-09 03:04:14,251 - sentence_align - INFO - [1400/2427] aligned_sentences=41259 | Speed: 0.0 docs/sec | ETA: 720.3 min | GPU: 1.9GB
+2026-01-09 03:04:24,651 - sentence_align - INFO - [1410/2427] aligned_sentences=41296 | Speed: 0.0 docs/sec | ETA: 708.4 min | GPU: 1.9GB
+2026-01-09 03:04:35,547 - sentence_align - INFO - [1420/2427] aligned_sentences=41336 | Speed: 0.0 docs/sec | ETA: 696.6 min | GPU: 1.9GB
+2026-01-09 03:04:40,464 - sentence_align - INFO - [1430/2427] aligned_sentences=41385 | Speed: 0.0 docs/sec | ETA: 684.9 min | GPU: 1.9GB
+2026-01-09 03:04:51,568 - sentence_align - INFO - [1440/2427] aligned_sentences=41420 | Speed: 0.0 docs/sec | ETA: 673.5 min | GPU: 1.9GB
+2026-01-09 03:05:01,759 - sentence_align - INFO - [1450/2427] aligned_sentences=41464 | Speed: 0.0 docs/sec | ETA: 662.2 min | GPU: 1.9GB
+2026-01-09 03:05:13,103 - sentence_align - INFO - [1460/2427] aligned_sentences=41506 | Speed: 0.0 docs/sec | ETA: 651.0 min | GPU: 1.9GB
+2026-01-09 03:05:28,398 - sentence_align - INFO - [1470/2427] aligned_sentences=41555 | Speed: 0.0 docs/sec | ETA: 640.1 min | GPU: 1.9GB
+2026-01-09 03:05:40,121 - sentence_align - INFO - [1480/2427] aligned_sentences=41600 | Speed: 0.0 docs/sec | ETA: 629.2 min | GPU: 1.9GB
+2026-01-09 03:05:46,769 - sentence_align - INFO - [1490/2427] aligned_sentences=41626 | Speed: 0.0 docs/sec | ETA: 618.5 min | GPU: 1.9GB
+2026-01-09 03:06:04,356 - sentence_align - INFO - [1500/2427] aligned_sentences=41669 | Speed: 0.0 docs/sec | ETA: 608.0 min | GPU: 1.9GB
+2026-01-09 03:06:15,386 - sentence_align - INFO - [1510/2427] aligned_sentences=41726 | Speed: 0.0 docs/sec | ETA: 597.5 min | GPU: 1.9GB
+2026-01-09 03:06:25,495 - sentence_align - INFO - [1520/2427] aligned_sentences=41768 | Speed: 0.0 docs/sec | ETA: 587.2 min | GPU: 1.9GB
+2026-01-09 03:06:37,552 - sentence_align - INFO - [1530/2427] aligned_sentences=41800 | Speed: 0.0 docs/sec | ETA: 577.1 min | GPU: 1.9GB
+2026-01-09 03:06:46,220 - sentence_align - INFO - [1540/2427] aligned_sentences=41846 | Speed: 0.0 docs/sec | ETA: 567.0 min | GPU: 1.9GB
+2026-01-09 03:07:00,733 - sentence_align - INFO - [1550/2427] aligned_sentences=41880 | Speed: 0.0 docs/sec | ETA: 557.2 min | GPU: 1.9GB
+2026-01-09 03:07:10,717 - sentence_align - INFO - [1560/2427] aligned_sentences=41940 | Speed: 0.0 docs/sec | ETA: 547.4 min | GPU: 1.9GB
+2026-01-09 03:07:19,531 - sentence_align - INFO - [1570/2427] aligned_sentences=41987 | Speed: 0.0 docs/sec | ETA: 537.7 min | GPU: 1.9GB
+2026-01-09 03:07:54,767 - sentence_align - INFO - [1580/2427] aligned_sentences=42017 | Speed: 0.0 docs/sec | ETA: 528.4 min | GPU: 1.9GB
+2026-01-09 03:08:13,167 - sentence_align - INFO - [1590/2427] aligned_sentences=42187 | Speed: 0.0 docs/sec | ETA: 519.0 min | GPU: 1.9GB
+2026-01-09 03:08:25,482 - sentence_align - INFO - [1600/2427] aligned_sentences=42341 | Speed: 0.0 docs/sec | ETA: 509.7 min | GPU: 1.9GB
+2026-01-09 03:08:43,112 - sentence_align - INFO - [1610/2427] aligned_sentences=42553 | Speed: 0.0 docs/sec | ETA: 500.6 min | GPU: 1.9GB
+2026-01-09 03:08:57,683 - sentence_align - INFO - [1620/2427] aligned_sentences=42664 | Speed: 0.0 docs/sec | ETA: 491.5 min | GPU: 1.9GB
+2026-01-09 03:09:39,582 - sentence_align - INFO - [1630/2427] aligned_sentences=43003 | Speed: 0.0 docs/sec | ETA: 482.8 min | GPU: 1.9GB
+2026-01-09 03:10:24,471 - sentence_align - INFO - [1640/2427] aligned_sentences=43493 | Speed: 0.0 docs/sec | ETA: 474.2 min | GPU: 1.9GB
+2026-01-09 03:11:25,372 - sentence_align - INFO - [1650/2427] aligned_sentences=43838 | Speed: 0.0 docs/sec | ETA: 465.8 min | GPU: 1.9GB
+2026-01-09 03:14:35,334 - sentence_align - INFO - [1660/2427] aligned_sentences=44854 | Speed: 0.0 docs/sec | ETA: 458.5 min | GPU: 1.9GB
+2026-01-09 03:15:47,246 - sentence_align - INFO - [1670/2427] aligned_sentences=45702 | Speed: 0.0 docs/sec | ETA: 450.3 min | GPU: 1.9GB
+2026-01-09 03:17:37,627 - sentence_align - INFO - [1680/2427] aligned_sentences=47176 | Speed: 0.0 docs/sec | ETA: 442.6 min | GPU: 1.9GB
+2026-01-09 03:18:39,026 - sentence_align - INFO - [1690/2427] aligned_sentences=48421 | Speed: 0.0 docs/sec | ETA: 434.5 min | GPU: 1.9GB
+2026-01-09 03:19:24,060 - sentence_align - INFO - [1700/2427] aligned_sentences=49370 | Speed: 0.0 docs/sec | ETA: 426.4 min | GPU: 1.9GB
+2026-01-09 03:22:08,907 - sentence_align - INFO - [1710/2427] aligned_sentences=51349 | Speed: 0.0 docs/sec | ETA: 419.2 min | GPU: 1.9GB
+2026-01-09 03:23:10,079 - sentence_align - INFO - [1720/2427] aligned_sentences=51984 | Speed: 0.0 docs/sec | ETA: 411.4 min | GPU: 1.9GB
+2026-01-09 03:24:13,432 - sentence_align - INFO - [1730/2427] aligned_sentences=53502 | Speed: 0.0 docs/sec | ETA: 403.7 min | GPU: 1.9GB
+2026-01-09 03:24:40,879 - sentence_align - INFO - [1740/2427] aligned_sentences=54156 | Speed: 0.0 docs/sec | ETA: 395.8 min | GPU: 1.9GB
+2026-01-09 03:24:47,743 - sentence_align - INFO - [1750/2427] aligned_sentences=54195 | Speed: 0.0 docs/sec | ETA: 387.8 min | GPU: 1.9GB
+2026-01-09 03:25:00,483 - sentence_align - INFO - [1760/2427] aligned_sentences=54320 | Speed: 0.0 docs/sec | ETA: 380.0 min | GPU: 1.9GB
+2026-01-09 03:25:31,159 - sentence_align - INFO - [1770/2427] aligned_sentences=54695 | Speed: 0.0 docs/sec | ETA: 372.4 min | GPU: 1.9GB
+2026-01-09 03:28:39,497 - sentence_align - INFO - [1780/2427] aligned_sentences=55669 | Speed: 0.0 docs/sec | ETA: 365.8 min | GPU: 1.9GB
+2026-01-09 03:32:26,766 - sentence_align - INFO - [1790/2427] aligned_sentences=56756 | Speed: 0.0 docs/sec | ETA: 359.5 min | GPU: 1.9GB
+2026-01-09 03:32:38,696 - sentence_align - INFO - [1800/2427] aligned_sentences=57155 | Speed: 0.0 docs/sec | ETA: 351.9 min | GPU: 1.9GB
+2026-01-09 03:32:51,578 - sentence_align - INFO - [1810/2427] aligned_sentences=58015 | Speed: 0.0 docs/sec | ETA: 344.5 min | GPU: 1.9GB
+2026-01-09 03:33:16,584 - sentence_align - INFO - [1820/2427] aligned_sentences=59116 | Speed: 0.0 docs/sec | ETA: 337.2 min | GPU: 1.9GB
+2026-01-09 03:35:06,045 - sentence_align - INFO - [1830/2427] aligned_sentences=60348 | Speed: 0.0 docs/sec | ETA: 330.4 min | GPU: 1.9GB
+2026-01-09 03:37:02,519 - sentence_align - INFO - [1840/2427] aligned_sentences=61497 | Speed: 0.0 docs/sec | ETA: 323.7 min | GPU: 1.9GB
+2026-01-09 03:38:52,303 - sentence_align - INFO - [1850/2427] aligned_sentences=62256 | Speed: 0.0 docs/sec | ETA: 317.1 min | GPU: 1.9GB
+2026-01-09 03:39:46,820 - sentence_align - INFO - [1860/2427] aligned_sentences=63031 | Speed: 0.0 docs/sec | ETA: 310.2 min | GPU: 1.9GB
+2026-01-09 03:39:59,674 - sentence_align - INFO - [1870/2427] aligned_sentences=63873 | Speed: 0.0 docs/sec | ETA: 303.1 min | GPU: 1.9GB
+2026-01-09 03:41:42,943 - sentence_align - INFO - [1880/2427] aligned_sentences=64948 | Speed: 0.0 docs/sec | ETA: 296.6 min | GPU: 1.9GB
+2026-01-09 03:41:54,584 - sentence_align - INFO - [1890/2427] aligned_sentences=65674 | Speed: 0.0 docs/sec | ETA: 289.7 min | GPU: 1.9GB
+2026-01-09 03:42:25,990 - sentence_align - INFO - [1900/2427] aligned_sentences=66454 | Speed: 0.0 docs/sec | ETA: 283.0 min | GPU: 1.9GB
+2026-01-09 03:42:46,974 - sentence_align - INFO - [1910/2427] aligned_sentences=67441 | Speed: 0.0 docs/sec | ETA: 276.2 min | GPU: 1.9GB
+2026-01-09 03:43:06,958 - sentence_align - INFO - [1920/2427] aligned_sentences=68424 | Speed: 0.0 docs/sec | ETA: 269.6 min | GPU: 1.9GB
+2026-01-09 03:43:25,083 - sentence_align - INFO - [1930/2427] aligned_sentences=69335 | Speed: 0.0 docs/sec | ETA: 263.0 min | GPU: 1.9GB
+2026-01-09 03:44:08,365 - sentence_align - INFO - [1940/2427] aligned_sentences=70356 | Speed: 0.0 docs/sec | ETA: 256.5 min | GPU: 1.9GB
+2026-01-09 03:44:22,906 - sentence_align - INFO - [1950/2427] aligned_sentences=70963 | Speed: 0.0 docs/sec | ETA: 250.0 min | GPU: 1.9GB
+2026-01-09 03:44:42,823 - sentence_align - INFO - [1960/2427] aligned_sentences=71753 | Speed: 0.0 docs/sec | ETA: 243.6 min | GPU: 1.9GB
+2026-01-09 03:47:36,752 - sentence_align - INFO - [1970/2427] aligned_sentences=72768 | Speed: 0.0 docs/sec | ETA: 237.9 min | GPU: 1.9GB
+2026-01-09 03:48:04,021 - sentence_align - INFO - [1980/2427] aligned_sentences=73724 | Speed: 0.0 docs/sec | ETA: 231.6 min | GPU: 1.9GB
+2026-01-09 03:48:49,326 - sentence_align - INFO - [1990/2427] aligned_sentences=74691 | Speed: 0.0 docs/sec | ETA: 225.4 min | GPU: 1.9GB
+2026-01-09 03:49:06,303 - sentence_align - INFO - [2000/2427] aligned_sentences=75463 | Speed: 0.0 docs/sec | ETA: 219.2 min | GPU: 1.9GB
+2026-01-09 03:49:24,703 - sentence_align - INFO - [2010/2427] aligned_sentences=76122 | Speed: 0.0 docs/sec | ETA: 213.1 min | GPU: 1.9GB
+2026-01-09 03:49:55,849 - sentence_align - INFO - [2020/2427] aligned_sentences=76970 | Speed: 0.0 docs/sec | ETA: 207.1 min | GPU: 1.9GB
+2026-01-09 03:50:09,197 - sentence_align - INFO - [2030/2427] aligned_sentences=77808 | Speed: 0.0 docs/sec | ETA: 201.0 min | GPU: 1.9GB
+2026-01-09 03:50:52,883 - sentence_align - INFO - [2040/2427] aligned_sentences=78645 | Speed: 0.0 docs/sec | ETA: 195.1 min | GPU: 1.9GB
+2026-01-09 03:51:05,215 - sentence_align - INFO - [2050/2427] aligned_sentences=79238 | Speed: 0.0 docs/sec | ETA: 189.2 min | GPU: 1.9GB
+2026-01-09 03:51:34,504 - sentence_align - INFO - [2060/2427] aligned_sentences=79929 | Speed: 0.0 docs/sec | ETA: 183.4 min | GPU: 1.9GB
+2026-01-09 03:51:49,948 - sentence_align - INFO - [2070/2427] aligned_sentences=80636 | Speed: 0.0 docs/sec | ETA: 177.6 min | GPU: 1.9GB
+2026-01-09 03:52:17,777 - sentence_align - INFO - [2080/2427] aligned_sentences=81546 | Speed: 0.0 docs/sec | ETA: 171.8 min | GPU: 1.9GB
+2026-01-09 03:53:00,510 - sentence_align - INFO - [2090/2427] aligned_sentences=82222 | Speed: 0.0 docs/sec | ETA: 166.2 min | GPU: 1.9GB
+2026-01-09 03:59:27,011 - sentence_align - INFO - [2100/2427] aligned_sentences=83468 | Speed: 0.0 docs/sec | ETA: 161.5 min | GPU: 1.9GB
+2026-01-09 04:03:57,095 - sentence_align - INFO - [2110/2427] aligned_sentences=84514 | Speed: 0.0 docs/sec | ETA: 156.5 min | GPU: 1.9GB
+2026-01-09 04:06:31,387 - sentence_align - INFO - [2120/2427] aligned_sentences=85549 | Speed: 0.0 docs/sec | ETA: 151.2 min | GPU: 1.9GB
+2026-01-09 04:06:46,123 - sentence_align - INFO - [2130/2427] aligned_sentences=86629 | Speed: 0.0 docs/sec | ETA: 145.6 min | GPU: 1.9GB
+2026-01-09 04:07:28,671 - sentence_align - INFO - [2140/2427] aligned_sentences=87697 | Speed: 0.0 docs/sec | ETA: 140.2 min | GPU: 1.9GB
+2026-01-09 04:07:45,203 - sentence_align - INFO - [2150/2427] aligned_sentences=88669 | Speed: 0.0 docs/sec | ETA: 134.7 min | GPU: 1.9GB
+2026-01-09 04:10:15,449 - sentence_align - INFO - [2160/2427] aligned_sentences=90032 | Speed: 0.0 docs/sec | ETA: 129.5 min | GPU: 1.9GB
+2026-01-09 04:13:08,400 - sentence_align - INFO - [2170/2427] aligned_sentences=91776 | Speed: 0.0 docs/sec | ETA: 124.5 min | GPU: 1.9GB
+2026-01-09 04:14:18,508 - sentence_align - INFO - [2180/2427] aligned_sentences=92821 | Speed: 0.0 docs/sec | ETA: 119.2 min | GPU: 1.9GB
+2026-01-09 04:15:25,201 - sentence_align - INFO - [2190/2427] aligned_sentences=93607 | Speed: 0.0 docs/sec | ETA: 114.0 min | GPU: 1.9GB
+2026-01-09 04:16:43,586 - sentence_align - INFO - [2200/2427] aligned_sentences=94432 | Speed: 0.0 docs/sec | ETA: 108.8 min | GPU: 1.9GB
+2026-01-09 04:16:51,619 - sentence_align - INFO - [2210/2427] aligned_sentences=95156 | Speed: 0.0 docs/sec | ETA: 103.5 min | GPU: 1.9GB
+2026-01-09 04:17:03,987 - sentence_align - INFO - [2220/2427] aligned_sentences=96044 | Speed: 0.0 docs/sec | ETA: 98.4 min | GPU: 1.9GB
+2026-01-09 04:18:05,509 - sentence_align - INFO - [2230/2427] aligned_sentences=96779 | Speed: 0.0 docs/sec | ETA: 93.3 min | GPU: 1.9GB
+2026-01-09 04:20:11,370 - sentence_align - INFO - [2240/2427] aligned_sentences=97990 | Speed: 0.0 docs/sec | ETA: 88.3 min | GPU: 1.9GB
+2026-01-09 04:23:23,306 - sentence_align - INFO - [2250/2427] aligned_sentences=99975 | Speed: 0.0 docs/sec | ETA: 83.5 min | GPU: 1.9GB
+2026-01-09 04:25:16,075 - sentence_align - INFO - [2260/2427] aligned_sentences=101012 | Speed: 0.0 docs/sec | ETA: 78.5 min | GPU: 1.9GB
+2026-01-09 04:27:20,643 - sentence_align - INFO - [2270/2427] aligned_sentences=101772 | Speed: 0.0 docs/sec | ETA: 73.7 min | GPU: 1.9GB
+2026-01-09 04:30:23,169 - sentence_align - INFO - [2280/2427] aligned_sentences=102875 | Speed: 0.0 docs/sec | ETA: 68.9 min | GPU: 1.9GB
+2026-01-09 04:31:17,360 - sentence_align - INFO - [2290/2427] aligned_sentences=103842 | Speed: 0.0 docs/sec | ETA: 64.0 min | GPU: 1.9GB
+2026-01-09 04:31:22,849 - sentence_align - INFO - [2300/2427] aligned_sentences=104400 | Speed: 0.0 docs/sec | ETA: 59.0 min | GPU: 1.9GB
+2026-01-09 04:31:37,883 - sentence_align - INFO - [2310/2427] aligned_sentences=105373 | Speed: 0.0 docs/sec | ETA: 54.2 min | GPU: 1.9GB
+2026-01-09 04:31:49,970 - sentence_align - INFO - [2320/2427] aligned_sentences=106283 | Speed: 0.0 docs/sec | ETA: 49.3 min | GPU: 1.9GB
+2026-01-09 04:33:29,981 - sentence_align - INFO - [2330/2427] aligned_sentences=107443 | Speed: 0.0 docs/sec | ETA: 44.6 min | GPU: 1.9GB
+2026-01-09 04:35:32,237 - sentence_align - INFO - [2340/2427] aligned_sentences=108608 | Speed: 0.0 docs/sec | ETA: 39.9 min | GPU: 1.9GB
+2026-01-09 04:38:01,735 - sentence_align - INFO - [2350/2427] aligned_sentences=110638 | Speed: 0.0 docs/sec | ETA: 35.2 min | GPU: 1.9GB
+2026-01-09 04:38:53,270 - sentence_align - INFO - [2360/2427] aligned_sentences=111800 | Speed: 0.0 docs/sec | ETA: 30.6 min | GPU: 1.9GB
+2026-01-09 04:40:22,312 - sentence_align - INFO - [2370/2427] aligned_sentences=113022 | Speed: 0.0 docs/sec | ETA: 25.9 min | GPU: 1.9GB
+2026-01-09 04:42:45,866 - sentence_align - INFO - [2380/2427] aligned_sentences=114065 | Speed: 0.0 docs/sec | ETA: 21.3 min | GPU: 1.9GB
+2026-01-09 04:43:50,117 - sentence_align - INFO - [2390/2427] aligned_sentences=115450 | Speed: 0.0 docs/sec | ETA: 16.7 min | GPU: 1.9GB
+2026-01-09 04:44:14,633 - sentence_align - INFO - [2400/2427] aligned_sentences=115547 | Speed: 0.0 docs/sec | ETA: 12.2 min | GPU: 1.9GB
+2026-01-09 04:44:31,236 - sentence_align - INFO - [2410/2427] aligned_sentences=115586 | Speed: 0.0 docs/sec | ETA: 7.6 min | GPU: 1.9GB
+2026-01-09 04:45:43,729 - sentence_align - INFO - [2420/2427] aligned_sentences=116141 | Speed: 0.0 docs/sec | ETA: 3.1 min | GPU: 1.9GB
+2026-01-09 04:46:37,805 - sentence_align - INFO - Saved 116650 aligned sentence pairs to data/processed/aligned_sentences.jsonl
+2026-01-09 04:46:37,805 - sentence_align - INFO - Total time: 1084.3 minutes (26.81 sec/doc)
+2026-01-09 04:46:37,805 - __main__ - INFO - Stage 3 complete.
+
+2026-01-09 04:46:37,805 - __main__ - INFO - 
+======================================================================
+2026-01-09 04:46:37,807 - __main__ - INFO - PIPELINE COMPLETE!
+2026-01-09 04:46:37,807 - __main__ - INFO - ======================================================================
+

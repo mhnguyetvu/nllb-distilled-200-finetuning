@@ -1,0 +1,40 @@
+2026-01-09 08:54:28,409 - __main__ - INFO - Logging initialized. Console + File: logs\select.log
+2026-01-09 08:54:28,409 - __main__ - INFO - 
+======================================================================
+2026-01-09 08:54:28,412 - __main__ - INFO - STAGE 5: FINAL SELECTION
+2026-01-09 08:54:28,412 - __main__ - INFO - ======================================================================
+
+2026-01-09 08:54:28,412 - __main__ - INFO - Loading filtered sentences from data/processed/filtered_sentences.jsonl
+2026-01-09 08:54:28,414 - __main__ - INFO - Loaded 64 filtered sentences
+2026-01-09 08:54:28,415 - __main__ - INFO - 
+Selection strategy: quality_balanced
+2026-01-09 08:54:28,415 - __main__ - INFO - Target size: 200,000
+2026-01-09 08:54:28,416 - __main__ - ERROR - Error in stage 'select': Unknown strategy: quality_balanced
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 353, in run_selection
+    selector.process_selection(
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 249, in process_selection
+    raise ValueError(f"Unknown strategy: {strategy}")
+ValueError: Unknown strategy: quality_balanced
+2026-01-09 08:59:43,048 - __main__ - INFO - Logging initialized. Console + File: logs\select.log
+2026-01-09 08:59:43,048 - __main__ - INFO - 
+======================================================================
+2026-01-09 08:59:43,048 - __main__ - INFO - STAGE 5: FINAL SELECTION
+2026-01-09 08:59:43,048 - __main__ - INFO - ======================================================================
+
+2026-01-09 08:59:43,049 - __main__ - INFO - Loading filtered sentences from data/processed/filtered_sentences.jsonl
+2026-01-09 08:59:43,051 - __main__ - INFO - Loaded 64 filtered sentences
+2026-01-09 08:59:43,051 - __main__ - INFO - 
+Selection strategy: quality_balanced
+2026-01-09 08:59:43,051 - __main__ - INFO - Target size: 200,000
+2026-01-09 08:59:43,051 - __main__ - ERROR - Error in stage 'select': Unknown strategy: quality_balanced
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 397, in main
+    stages[args.stage](config)
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 353, in run_selection
+    selector.process_selection(
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\run_pipeline.py", line 249, in process_selection
+    raise ValueError(f"Unknown strategy: {strategy}")
+ValueError: Unknown strategy: quality_balanced

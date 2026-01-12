@@ -1,0 +1,100 @@
+2026-01-12 09:38:17,359 - crawl_and_extract - INFO - [12/50] Crawled: https://www.jw.org/ko/%EC%84%B1%EA%B2%BD-%EA%B0%80%EB%A5%B4%EC%B9%A8/%ED%95%98%EB%8A%90%EB%8B%98%EC%97%90-%EB%8C%80%ED%95%9C-%EB%AF%BF%EC%9D%8C/
+2026-01-12 09:38:18,901 - crawl_and_extract - INFO - [13/50] Crawled: https://www.jw.org/ko/%EC%84%B1%EA%B2%BD-%EA%B0%80%EB%A5%B4%EC%B9%A8/%EA%B3%BC%ED%95%99/
+2026-01-12 09:38:20,191 - crawl_and_extract - INFO - [14/50] Crawled: https://www.jw.org/ko/%EC%84%B1%EA%B2%BD-%EA%B0%80%EB%A5%B4%EC%B9%A8/%EC%97%AD%EC%82%AC/
+2026-01-12 09:38:21,310 - crawl_and_extract - INFO - [15/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/
+2026-01-12 09:38:22,980 - crawl_and_extract - INFO - [16/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%84%B1%EA%B2%BD/
+2026-01-12 09:38:24,491 - crawl_and_extract - INFO - [17/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%84%9C%EC%A0%81/
+2026-01-12 09:38:26,253 - crawl_and_extract - INFO - [18/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%ED%8C%9C%ED%94%8C%EB%A0%9B/
+2026-01-12 09:38:28,074 - crawl_and_extract - INFO - [19/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%A0%84%EB%8F%84%EC%A7%80/
+2026-01-12 09:38:31,555 - crawl_and_extract - INFO - [20/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%97%B0%EC%9E%AC-%EA%B8%B0%EC%82%AC/
+2026-01-12 09:38:33,059 - crawl_and_extract - INFO - [21/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/magazines/
+2026-01-12 09:38:34,940 - crawl_and_extract - INFO - [22/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8-%EC%A7%91%ED%9A%8C-%EA%B5%90%EC%9E%AC/
+2026-01-12 09:38:37,188 - crawl_and_extract - INFO - [23/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%99%95%EA%B5%AD-%EB%B4%89%EC%82%AC/
+2026-01-12 09:38:38,535 - crawl_and_extract - INFO - [24/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/
+2026-01-12 09:38:40,483 - crawl_and_extract - INFO - [25/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%83%89%EC%9D%B8/
+2026-01-12 09:38:42,298 - crawl_and_extract - INFO - [26/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%A7%80%EC%B9%A8%EC%84%9C/
+2026-01-12 09:38:43,932 - crawl_and_extract - INFO - [27/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EB%8F%99%EC%98%81%EC%83%81/#ko/categories/VODStudio
+2026-01-12 09:38:44,824 - crawl_and_extract - INFO - [28/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%9D%8C%EC%95%85-%EB%85%B8%EB%9E%98/
+2026-01-12 09:38:46,647 - crawl_and_extract - INFO - [29/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%98%A4%EB%94%94%EC%98%A4-%EC%84%B1%EA%B2%BD-%EB%93%9C%EB%9D%BC%EB%A7%88/
+2026-01-12 09:38:48,231 - crawl_and_extract - INFO - [30/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%84%B1%EA%B2%BD-%EC%9E%85%EC%B2%B4%EB%82%AD%EB%8F%85/
+2026-01-12 09:38:50,261 - crawl_and_extract - INFO - [31/50] Crawled: https://www.jw.org/ko/%EB%89%B4%EC%8A%A4/
+2026-01-12 09:38:51,310 - crawl_and_extract - INFO - [32/50] Crawled: https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/
+2026-01-12 09:38:52,301 - crawl_and_extract - INFO - [33/50] Crawled: https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/faq/
+2026-01-12 09:38:55,210 - crawl_and_extract - INFO - [34/50] Crawled: https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/%EB%B0%A9%EB%AC%B8-%EC%8B%A0%EC%B2%AD%ED%95%98%EA%B8%B0/
+2026-01-12 09:38:55,542 - trafilatura.core - WARNING - discarding data: None
+2026-01-12 09:38:56,386 - crawl_and_extract - INFO - [35/50] Crawled: https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/%EC%97%B0%EB%9D%BD%ED%95%98%EA%B8%B0/
+2026-01-12 09:38:57,693 - crawl_and_extract - INFO - [36/50] Crawled: https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/%EB%B2%A0%EB%8D%B8-%EA%B2%AC%ED%95%99/
+2026-01-12 09:38:58,953 - crawl_and_extract - INFO - [37/50] Crawled: https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/%EC%A7%91%ED%9A%8C/
+2026-01-12 09:38:59,987 - crawl_and_extract - INFO - [38/50] Crawled: https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/memorial/
+2026-01-12 09:39:00,947 - crawl_and_extract - INFO - [39/50] Crawled: https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/conventions/
+2026-01-12 09:39:02,157 - crawl_and_extract - INFO - [40/50] Crawled: https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/%ED%99%9C%EB%8F%99/
+2026-01-12 09:39:03,557 - crawl_and_extract - INFO - [41/50] Crawled: https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/%EA%B2%BD%ED%97%98%EB%8B%B4/
+2026-01-12 09:39:04,937 - crawl_and_extract - INFO - [42/50] Crawled: https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/%EC%A0%84%EC%84%B8%EA%B3%84/
+2026-01-12 09:39:06,430 - crawl_and_extract - INFO - [43/50] Crawled: https://www.jw.org/ko/choose-language?locale=ko&prefer=lang&docid=1011200
+2026-01-12 09:39:09,612 - crawl_and_extract - INFO - [OK] Extracted pair: https://www.jw.org/ko/choose-language?locale=ko&prefer=lang&docid=1011200 <-> https://www.jw.org/vi/choose-language (ko:374 vi:412 chars)
+2026-01-12 09:39:10,504 - crawl_and_extract - INFO - [44/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/magazines/%ED%8C%8C%EC%88%98%EB%8C%80-2018%EB%85%84-%EC%A0%9C3%ED%98%B8-9%EC%9B%94-10%EC%9B%94/
+2026-01-12 09:39:11,534 - crawl_and_extract - INFO - [45/50] Crawled: https://www.jw.org/ko/%EC%B5%9C%EA%B7%BC%EC%97%90-%EA%B2%8C%EC%8B%9C%EB%90%98%EC%97%88%EB%8D%98-%EA%B8%B0%EC%82%AC%EB%93%A4/
+2026-01-12 09:39:12,345 - crawl_and_extract - INFO - [46/50] Crawled: https://www.jw.org/ko/%EC%84%B1%EA%B2%BD-%EA%B0%80%EB%A5%B4%EC%B9%A8/%EC%A7%88%EB%AC%B8/%EC%9B%90%EC%88%98%EB%A5%BC-%EC%82%AC%EB%9E%91%ED%95%98%EB%9D%BC%EB%8A%94-%EB%A7%90%EC%9D%98-%EC%9D%98%EB%AF%B8/
+2026-01-12 09:39:13,402 - crawl_and_extract - INFO - [47/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%97%B0%EC%9E%AC-%EA%B8%B0%EC%82%AC/%EA%B7%B8-%EB%B0%96%EC%9D%98-%EC%A3%BC%EC%A0%9C/%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EC%A0%84%EC%9F%81%EC%9D%84-%EB%B2%8C%EC%9D%B4%EB%8A%94-%EC%86%8C%EB%A6%AC%EB%A5%BC-%EB%93%A4%EC%9D%84-%EA%B2%83%EC%9E%85%EB%8B%88%EB%8B%A4/
+2026-01-12 09:39:14,373 - crawl_and_extract - INFO - [48/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/magazines/%EA%B9%A8%EC%96%B4%EB%9D%BC-2016%EB%85%84-8%EC%9B%94-%EC%A0%9C4%ED%98%B8/%EC%8A%B5%EA%B4%80/
+2026-01-12 09:39:15,586 - crawl_and_extract - INFO - [49/50] Crawled: https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%84%B1%EA%B2%BD/%EC%97%B0%EA%B5%AC%EC%9A%A9-%EC%84%B1%EA%B2%BD/%EC%B1%85%EB%AA%85/
+2026-01-12 09:39:16,643 - crawl_and_extract - WARNING - Failed to fetch/extract https://www.jw.org/vi/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%84%B1%EA%B2%BD/%EC%97%B0%EA%B5%AC%EC%9A%A9-%EC%84%B1%EA%B2%BD/%EC%B1%85%EB%AA%85/: 404 Client Error: Not Found for url: https://www.jw.org/vi/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%84%B1%EA%B2%BD/%EC%97%B0%EA%B5%AC%EC%9A%A9-%EC%84%B1%EA%B2%BD/%EC%B1%85%EB%AA%85/
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\crawl_and_extract.py", line 438, in fetch_and_extract
+    response.raise_for_status()
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://www.jw.org/vi/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/%EC%84%B1%EA%B2%BD/%EC%97%B0%EA%B5%AC%EC%9A%A9-%EC%84%B1%EA%B2%BD/%EC%B1%85%EB%AA%85/
+2026-01-12 09:39:17,247 - crawl_and_extract - INFO - [50/50] Crawled: https://www.jw.org/ko/whats-new/
+2026-01-12 09:39:18,108 - crawl_and_extract - INFO - Starting crawl of www.liveinkorea.kr from https://www.liveinkorea.kr/portal/KOR/main.do
+2026-01-12 09:39:18,981 - crawl_and_extract - WARNING - Failed to fetch https://www.liveinkorea.kr/portal/KOR/main.do: 404 Client Error:  for url: https://www.liveinkorea.kr/portal/KOR/main.do
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\crawl_and_extract.py", line 509, in crawl_site
+    response.raise_for_status()
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error:  for url: https://www.liveinkorea.kr/portal/KOR/main.do
+2026-01-12 09:39:18,982 - crawl_and_extract - INFO - Starting crawl of krdict.korean.go.kr from https://krdict.korean.go.kr/kor/mainAction
+2026-01-12 09:39:20,111 - crawl_and_extract - INFO - [1/50] Crawled: https://krdict.korean.go.kr/kor/mainAction
+2026-01-12 09:39:20,475 - crawl_and_extract - INFO - [OK] Extracted pair: https://krdict.korean.go.kr/kor/mainAction <-> https://krdict.korean.go.kr/vie/mainAction (ko:276 vi:174 chars)
+2026-01-12 09:39:21,662 - crawl_and_extract - INFO - [2/50] Crawled: https://krdict.korean.go.kr/kor/dicSearch/actCategory
+2026-01-12 09:39:22,814 - crawl_and_extract - INFO - [OK] Extracted pair: https://krdict.korean.go.kr/kor/dicSearch/actCategory <-> https://krdict.korean.go.kr/vie/dicSearch/actCategory (ko:110 vi:278 chars)
+2026-01-12 09:39:23,682 - crawl_and_extract - INFO - [3/50] Crawled: https://krdict.korean.go.kr/statistic/dicStat
+2026-01-12 09:39:24,340 - crawl_and_extract - INFO - [4/50] Crawled: https://krdict.korean.go.kr/kor/help/helpList
+2026-01-12 09:39:24,747 - crawl_and_extract - INFO - [OK] Extracted pair: https://krdict.korean.go.kr/kor/help/helpList <-> https://krdict.korean.go.kr/vie/help/helpList (ko:1509 vi:3727 chars)
+2026-01-12 09:39:25,400 - crawl_and_extract - INFO - [5/50] Crawled: https://krdict.korean.go.kr/kor/kboardPolicy/copyRightTermsInfo
+2026-01-12 09:39:25,793 - crawl_and_extract - INFO - [OK] Extracted pair: https://krdict.korean.go.kr/kor/kboardPolicy/copyRightTermsInfo <-> https://krdict.korean.go.kr/vie/kboardPolicy/copyRightTermsInfo (ko:1360 vi:2476 chars)
+2026-01-12 09:39:26,456 - crawl_and_extract - INFO - [6/50] Crawled: https://krdict.korean.go.kr/kor/board/kboardListUserAction?notice_category=basicDic
+2026-01-12 09:39:26,884 - crawl_and_extract - INFO - [OK] Extracted pair: https://krdict.korean.go.kr/kor/board/kboardListUserAction?notice_category=basicDic <-> https://krdict.korean.go.kr/vie/board/kboardListUserAction (ko:448 vi:387 chars)
+2026-01-12 09:39:27,758 - crawl_and_extract - INFO - [7/50] Crawled: https://krdict.korean.go.kr/kor/openApi/openApiInfo
+2026-01-12 09:39:28,690 - crawl_and_extract - INFO - [OK] Extracted pair: https://krdict.korean.go.kr/kor/openApi/openApiInfo <-> https://krdict.korean.go.kr/vie/openApi/openApiInfo (ko:9671 vi:12763 chars)
+2026-01-12 09:39:29,335 - crawl_and_extract - INFO - [8/50] Crawled: https://krdict.korean.go.kr/kor/comment/commentErrorReport
+2026-01-12 09:39:30,108 - crawl_and_extract - WARNING - Failed to fetch https://krdict.korean.go.kr/openApi/openApiInfo: 404 Client Error: Not Found for url: https://krdict.korean.go.kr/openApi/openApiInfo
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\crawl_and_extract.py", line 509, in crawl_site
+    response.raise_for_status()
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://krdict.korean.go.kr/openApi/openApiInfo
+2026-01-12 09:39:30,190 - crawl_and_extract - WARNING - Failed to fetch https://krdict.korean.go.kr/openApi/openApiRegister: 404 Client Error: Not Found for url: https://krdict.korean.go.kr/openApi/openApiRegister
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\crawl_and_extract.py", line 509, in crawl_site
+    response.raise_for_status()
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://krdict.korean.go.kr/openApi/openApiRegister
+2026-01-12 09:39:30,284 - crawl_and_extract - WARNING - Failed to fetch https://krdict.korean.go.kr/openApi/openApiExam: 404 Client Error: Not Found for url: https://krdict.korean.go.kr/openApi/openApiExam
+Traceback (most recent call last):
+  File "C:\Users\nguyetnvm\Documents\nllb-distilled-200-finetuning\crawl_and_extract.py", line 509, in crawl_site
+    response.raise_for_status()
+  File "C:\Users\nguyetnvm\AppData\Local\miniconda3\envs\langgraph_env\Lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://krdict.korean.go.kr/openApi/openApiExam
+2026-01-12 09:39:30,569 - crawl_and_extract - INFO - Saved 7 new clean document pairs to data/processed/clean_documents.jsonl (total in memory: 7)
+2026-01-12 09:39:30,569 - __main__ - INFO - Stage 1 complete.
+
+2026-01-12 09:39:30,571 - __main__ - INFO - 
+======================================================================
+2026-01-12 09:39:30,571 - __main__ - INFO - PIPELINE COMPLETE!
+2026-01-12 09:39:30,571 - __main__ - INFO - ======================================================================
+
