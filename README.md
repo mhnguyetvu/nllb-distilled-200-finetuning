@@ -323,10 +323,6 @@ python finetune_nllb.py \
 - **OPUS Corpus**: https://opus.nlpl.eu/
 - **FLORES Benchmark**: https://github.com/facebookresearch/flores
 
-## 📄 License
-
-MIT License - See [A100_TRANSFER_GUIDE.md](A100_TRANSFER_GUIDE.md) for complete setup instructions.
-
 ---
 
 **Last Updated**: January 2026  
