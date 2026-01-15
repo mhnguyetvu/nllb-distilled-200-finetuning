@@ -1,0 +1,13 @@
+# Enhanced Filtering Dependencies
+
+# Language detection
+langdetect>=1.0.9
+
+# Near-duplicate detection
+datasketch>=1.6.4
+
+# Already in base requirements.txt:
+# torch
+# sentence-transformers
+# tqdm
+# numpy

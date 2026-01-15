@@ -1,5 +1,49 @@
+# Python
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+ENV/
+
+# Data & Models
 data/
 models/
-*.bak
+outputs/
+logs/
+results/
+
+# Config files (auto-generated)
 *.yaml
+!final_config_80.yaml
+
+# Documentation (local only)
+FULL_GUIDE.md
+
+# Backups
+*.bak
+*.backup
+*_OLD.*
+*_NEW.*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb

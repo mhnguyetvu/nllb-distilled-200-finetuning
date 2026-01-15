@@ -171,8 +171,19 @@ def evaluate_translation(
     
     # Load model and tokenizer
     logger.info(f"Loading model: {model_path}")
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
-    model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
+    
+    # Check if it's a local path (starts with . or / or is a valid directory)
+    import os
+    is_local = model_path.startswith('.') or model_path.startswith('/') or os.path.isdir(model_path)
+    
+    if is_local:
+        logger.info(f"Loading from local path: {model_path}")
+        tokenizer = AutoTokenizer.from_pretrained(model_path, local_files_only=True)
+        model = AutoModelForSeq2SeqLM.from_pretrained(model_path, local_files_only=True)
+    else:
+        logger.info(f"Loading from HuggingFace Hub: {model_path}")
+        tokenizer = AutoTokenizer.from_pretrained(model_path)
+        model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
     
     # Move to GPU if available
     device = "cuda" if torch.cuda.is_available() else "cpu"

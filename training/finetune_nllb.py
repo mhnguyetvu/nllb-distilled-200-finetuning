@@ -11,6 +11,8 @@ import os
 import json
 import yaml
 import logging
+from datetime import datetime
+from pathlib import Path
 from dataclasses import dataclass
 from typing import Optional, Dict, Any
 import torch
@@ -26,11 +28,63 @@ from transformers import (
 import evaluate
 import numpy as np
 
-# Setup logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
+
+def setup_logging(log_dir: str = "../logs", log_name: str = None) -> logging.Logger:
+    """Setup logging to both console and file with detailed formatting"""
+    
+    # Create logs directory
+    Path(log_dir).mkdir(parents=True, exist_ok=True)
+    
+    # Generate log filename with timestamp
+    if log_name is None:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        log_name = f"training_{timestamp}.log"
+    
+    log_file = Path(log_dir) / log_name
+    
+    # Create logger
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.INFO)
+    
+    # Remove existing handlers
+    logger.handlers.clear()
+    
+    # Create formatters
+    detailed_formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        datefmt='%Y-%m-%d %H:%M:%S'
+    )
+    simple_formatter = logging.Formatter(
+        '%(asctime)s - %(levelname)s - %(message)s',
+        datefmt='%H:%M:%S'
+    )
+    
+    # Console handler (simple format)
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)
+    console_handler.setFormatter(simple_formatter)
+    
+    # File handler (detailed format)
+    file_handler = logging.FileHandler(log_file, encoding='utf-8')
+    file_handler.setLevel(logging.DEBUG)
+    file_handler.setFormatter(detailed_formatter)
+    
+    # Add handlers
+    logger.addHandler(console_handler)
+    logger.addHandler(file_handler)
+    
+    # Log setup info
+    logger.info("="*70)
+    logger.info("LOGGING SETUP")
+    logger.info("="*70)
+    logger.info(f"Log file: {log_file}")
+    logger.info(f"Log level: INFO")
+    logger.info("="*70 + "\n")
+    
+    return logger
+
+
+# Setup logging (will be called in main)
 logger = logging.getLogger(__name__)
 
 
@@ -138,23 +192,50 @@ def main():
     parser = argparse.ArgumentParser(description="Finetune NLLB-200 for Korean-Vietnamese translation")
     parser.add_argument('--config', type=str, default='finetune_config.yaml', help='Path to config file')
     parser.add_argument('--resume', type=str, default=None, help='Path to checkpoint to resume from')
+    parser.add_argument('--log-dir', type=str, default=None, help='Directory for log files (overrides config)')
+    parser.add_argument('--log-name', type=str, default=None, help='Custom log file name')
     args = parser.parse_args()
     
-    # Load configuration
+    # Load configuration first to get log_dir from config if specified
     config = load_config(args.config)
-    logger.info(f"Loaded configuration from {args.config}")
+    
+    # Determine log directory: CLI arg > config > default
+    log_dir = args.log_dir or config.get('training', {}).get('log_dir', '../logs')
+    
+    # Setup logging
+    global logger
+    logger = setup_logging(log_dir=log_dir, log_name=args.log_name)
+    
+    logger.info("="*70)
+    logger.info("CONFIGURATION LOADED")
+    logger.info("="*70)
+    logger.info(f"Config file: {args.config}")
+    logger.info(f"Resume from: {args.resume if args.resume else 'None (training from scratch)'}")
+    logger.info("="*70 + "\n")
     
     # Check GPU
     if not torch.cuda.is_available():
+        logger.error("❌ CUDA not available! This script requires GPU.")
         raise RuntimeError("❌ CUDA not available! This script requires GPU.")
     
     gpu_name = torch.cuda.get_device_name(0)
     gpu_memory = torch.cuda.get_device_properties(0).total_memory / 1024**3
-    logger.info(f"✓ GPU: {gpu_name}, Memory: {gpu_memory:.1f} GB")
+    logger.info("="*70)
+    logger.info("GPU INFORMATION")
+    logger.info("="*70)
+    logger.info(f"GPU: {gpu_name}")
+    logger.info(f"Memory: {gpu_memory:.1f} GB")
+    logger.info(f"CUDA Version: {torch.version.cuda}")
+    logger.info("="*70 + "\n")
     
     # Load tokenizer and model
     model_name = config['model']['name']
-    logger.info(f"Loading model: {model_name}")
+    logger.info("="*70)
+    logger.info("MODEL LOADING")
+    logger.info("="*70)
+    logger.info(f"Model: {model_name}")
+    logger.info(f"Source language: {config['model']['src_lang']}")
+    logger.info(f"Target language: {config['model']['tgt_lang']}")
     
     tokenizer = AutoTokenizer.from_pretrained(
         model_name,
@@ -162,25 +243,37 @@ def main():
         src_lang=config['model']['src_lang'],
         tgt_lang=config['model']['tgt_lang'],
     )
+    logger.info("✓ Tokenizer loaded")
     
     model = AutoModelForSeq2SeqLM.from_pretrained(
         model_name,
         cache_dir=config['model'].get('cache_dir'),
     )
+    logger.info("✓ Model loaded")
     
     # Enable Flash Attention if available
     if config.get('advanced', {}).get('use_flash_attention', True):
         setup_flash_attention(model)
     
     logger.info(f"Model parameters: {model.num_parameters() / 1e6:.1f}M")
+    logger.info("="*70 + "\n")
     
     # Load datasets
-    logger.info("Loading datasets...")
+    logger.info("="*70)
+    logger.info("DATASET LOADING")
+    logger.info(f"Train file: {config['data']['train_file']}")
+    logger.info(f"Dev file: {config['data']['dev_file']}")
     train_dataset = load_jsonl_dataset(config['data']['train_file'])
     eval_dataset = load_jsonl_dataset(config['data']['dev_file'])
+    logger.info("="*70 + "\n")
     
     # Preprocess datasets
-    logger.info("Preprocessing datasets...")
+    logger.info("="*70)
+    logger.info("DATA PREPROCESSING")
+    logger.info("="*70)
+    logger.info(f"Max source length: {config['data']['max_source_length']}")
+    logger.info(f"Max target length: {config['data']['max_target_length']}")
+    
     src_lang = config['model']['src_lang']
     tgt_lang = config['model']['tgt_lang']
     max_source_length = config['data']['max_source_length']
@@ -192,6 +285,7 @@ def main():
         remove_columns=train_dataset.column_names,
         desc="Preprocessing training data",
     )
+    logger.info("✓ Training data preprocessed")
     
     eval_dataset = eval_dataset.map(
         lambda x: preprocess_function(x, tokenizer, src_lang, tgt_lang, max_source_length, max_target_length),
@@ -199,6 +293,8 @@ def main():
         remove_columns=eval_dataset.column_names,
         desc="Preprocessing evaluation data",
     )
+    logger.info("✓ Evaluation data preprocessed")
+    logger.info("="*70 + "\n")
     
     # Data collator
     data_collator = DataCollatorForSeq2Seq(
@@ -297,39 +393,77 @@ def main():
     logger.info("="*60 + "\n")
     
     # Train
-    logger.info("Starting training...")
-    
+    logger.info("="*70)
+    logger.info("TRAINING START")
+    logger.info("="*70)
     if args.resume:
         logger.info(f"Resuming from checkpoint: {args.resume}")
-        train_result = trainer.train(resume_from_checkpoint=args.resume)
     else:
-        train_result = trainer.train()
+        logger.info("Training from scratch")
+    logger.info("="*70 + "\n")
+    
+    try:
+        if args.resume:
+            train_result = trainer.train(resume_from_checkpoint=args.resume)
+        else:
+            train_result = trainer.train()
+    except Exception as e:
+        logger.error("="*70)
+        logger.error("TRAINING ERROR")
+        logger.error("="*70)
+        logger.error(f"Error: {str(e)}", exc_info=True)
+        logger.error("="*70)
+        raise
     
     # Save final model
-    logger.info("Saving final model...")
+    logger.info("\n" + "="*70)
+    logger.info("SAVING MODEL")
+    logger.info("="*70)
     trainer.save_model()
     tokenizer.save_pretrained(training_args.output_dir)
+    logger.info(f"✓ Model saved to: {training_args.output_dir}")
     
     # Save training metrics
     metrics = train_result.metrics
     trainer.log_metrics("train", metrics)
     trainer.save_metrics("train", metrics)
     trainer.save_state()
+    logger.info("✓ Training metrics saved")
+    logger.info("="*70 + "\n")
     
     # Final evaluation
-    logger.info("Running final evaluation...")
+    logger.info("="*70)
+    logger.info("FINAL EVALUATION")
+    logger.info("="*70)
     metrics = trainer.evaluate()
     trainer.log_metrics("eval", metrics)
     trainer.save_metrics("eval", metrics)
-    
-    logger.info("\n" + "="*60)
-    logger.info("Training completed successfully!")
-    logger.info(f"Model saved to: {training_args.output_dir}")
-    logger.info(f"Final eval loss: {metrics['eval_loss']:.4f}")
+    logger.info(f"Eval loss: {metrics['eval_loss']:.4f}")
     if 'eval_bleu' in metrics:
-        logger.info(f"Final eval BLEU: {metrics['eval_bleu']:.2f}")
-    logger.info("="*60 + "\n")
+        logger.info(f"Eval BLEU: {metrics['eval_bleu']:.2f}")
+    logger.info("="*70 + "\n")
+    
+    # Success summary
+    logger.info("="*70)
+    logger.info("TRAINING COMPLETED SUCCESSFULLY!")
+    logger.info("="*70)
+    logger.info(f"Model: {training_args.output_dir}")
+    logger.info(f"Final loss: {metrics['eval_loss']:.4f}")
+    if 'eval_bleu' in metrics:
+        logger.info(f"Final BLEU: {metrics['eval_bleu']:.2f}")
+    logger.info(f"Total epochs: {config['training']['num_train_epochs']}")
+    logger.info(f"Training examples: {len(train_dataset):,}")
+    logger.info("="*70 + "\n")
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        logger = logging.getLogger(__name__)
+        logger.error("="*70)
+        logger.error("FATAL ERROR")
+        logger.error("="*70)
+        logger.error(f"Error: {str(e)}", exc_info=True)
+        logger.error("="*70)
+        raise
