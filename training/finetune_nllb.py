@@ -29,7 +29,7 @@ import evaluate
 import numpy as np
 
 
-def setup_logging(log_dir: str = "../logs", log_name: str = None) -> logging.Logger:
+def setup_logging(log_dir: str = "./logs", log_name: str = None) -> logging.Logger:
     """Setup logging to both console and file with detailed formatting"""
     
     # Create logs directory
