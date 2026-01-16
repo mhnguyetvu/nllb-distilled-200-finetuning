@@ -1,4 +1,4 @@
-# NLLB-200 Fine-tuning for Korean-Vietnamese Translation
+﻿# NLLB-200 Fine-tuning for Korean-Vietnamese Translation
 
 Comprehensive pipeline for fine-tuning NLLB-200-distilled-600M on Korean-Vietnamese parallel data with advanced quality filtering and semantic alignment.
 
@@ -25,8 +25,9 @@ This project implements a complete pipeline for fine-tuning Facebook''s NLLB-200
 - **Production-ready training**: Optimized configs for A100 GPUs
 
 **Key Results:**
-- BLEU: **23.85** (baseline: 19.89, +20% improvement)
-- COMET: **0.869** (baseline: 0.83)
+- BLEU: **24.31** on high-quality test, **24.08** on diverse test
+- COMET: **0.87** (both test sets)
+- Improvement: **+2.8% to +9.9%** over pretrained baseline
 - Dataset: 27K high-quality pairs (semantic threshold 0.80)
 
 ---
@@ -150,8 +151,149 @@ python analyze_eval_results.py results/comparison.json
 
 4. **Production Training** (1.5-2 hours on A100)
    - Full 10-epoch training on optimal threshold
-   - Expected BLEU: 26-30 (vs 23.85 in quick sweep)
-   - Saves best checkpoints automatically
+   - Final BLEU: **24.31** (high-quality test), **24.08** (diverse test)
+   - Model checkpoint: `outputs/final_semantic_80/checkpoint-1000`
+   - Proven generalization: +9.9% improvement on challenging data
+
+---
+
+##  Data Format Requirements
+
+### Input Data Format
+
+All scripts expect JSONL (JSON Lines) format with the following structure:
+
+```json
+{"translation": {"kor_Hang": "한국어 문장", "vie_Latn": "Câu tiếng Việt"}}
+{"translation": {"kor_Hang": "또 다른 문장", "vie_Latn": "Câu khác"}}
+```
+
+**Field Requirements:**
+- `translation`: Object containing source and target language
+- `kor_Hang`: Korean text in Hangul script (source)
+- `vie_Latn`: Vietnamese text in Latin script (target)
+- Each line must be valid JSON
+- One sentence pair per line
+
+### Getting Data
+
+#### Option 1: OPUS Corpus (Recommended for beginners)
+
+```bash
+# Install opustools
+pip install opustools-pkg
+
+# Download Korean-Vietnamese parallel data from OpenSubtitles
+opus_read -d OpenSubtitles -s ko -t vi -wm moses -w data/raw/opus_ko_vi.txt
+
+# Convert to JSONL format (you'll need to write a simple converter)
+# Expected output: data/raw/opus_ko_vi.jsonl
+```
+
+**Available OPUS datasets for ko-vi:**
+- OpenSubtitles: Movie/TV subtitles (~200K pairs)
+- Tatoeba: Short sentences (~10K pairs)
+- WikiMatrix: Wikipedia sentences (~50K pairs)
+
+#### Option 2: Custom Data
+
+If you have your own parallel data:
+
+```python
+# Example converter script
+import json
+
+# Assuming you have parallel files: ko.txt and vi.txt
+with open('ko.txt', 'r', encoding='utf-8') as f_ko, \
+     open('vi.txt', 'r', encoding='utf-8') as f_vi, \
+     open('data/raw/custom.jsonl', 'w', encoding='utf-8') as f_out:
+    
+    for ko_line, vi_line in zip(f_ko, f_vi):
+        obj = {
+            "translation": {
+                "kor_Hang": ko_line.strip(),
+                "vie_Latn": vi_line.strip()
+            }
+        }
+        f_out.write(json.dumps(obj, ensure_ascii=False) + '\n')
+```
+
+### Data Validation
+
+Before running the pipeline, validate your data format:
+
+```bash
+# Quick check
+python -c "
+import json
+with open('data/raw/your_data.jsonl', 'r', encoding='utf-8') as f:
+    for i, line in enumerate(f, 1):
+        try:
+            obj = json.loads(line)
+            assert 'translation' in obj
+            assert 'kor_Hang' in obj['translation']
+            assert 'vie_Latn' in obj['translation']
+            if i == 1:
+                print('✓ Format valid!')
+                print(f'Sample: {obj}')
+            if i >= 5:
+                break
+        except Exception as e:
+            print(f'✗ Line {i} error: {e}')
+            break
+"
+```
+
+---
+
+##  Configuration & Paths
+
+### Important: Update Absolute Paths
+
+⚠️ **Before running training scripts, you MUST update absolute paths in config files:**
+
+#### In `final_config_80.yaml`:
+
+```yaml
+# CHANGE THESE PATHS to match your system:
+model_name_or_path: facebook/nllb-200-distilled-600M  # OK as-is (HuggingFace hub)
+
+# UPDATE these paths:
+output_dir: /path/to/your/project/outputs/final_semantic_80
+train_file: /path/to/your/project/data/sweep/semantic_80/nllb_train.jsonl
+validation_file: /path/to/your/project/data/sweep/semantic_80/nllb_dev.jsonl
+test_file: /path/to/your/project/data/sweep/semantic_80/nllb_test.jsonl
+logging_dir: /path/to/your/project/logs
+```
+
+**Quick find & replace:**
+```bash
+# On Windows (PowerShell)
+(Get-Content final_config_80.yaml) -replace '/data/AITeam/nguyetnvm/nllb', 'C:/Users/YourName/Documents/nllb-distilled-200-finetuning' | Set-Content final_config_80.yaml
+
+# On Linux/Mac
+sed -i 's|/data/AITeam/nguyetnvm/nllb|/home/yourname/nllb-distilled-200-finetuning|g' final_config_80.yaml
+```
+
+### Dependencies Installation Order
+
+Install dependencies in this order to avoid conflicts:
+
+```bash
+# 1. Base dependencies (data processing, embeddings)
+pip install -r requirements.txt
+
+# 2. Filtering dependencies (language detection, deduplication)
+pip install -r requirements_filter.txt
+
+# 3. Training dependencies (transformers, evaluation metrics)
+pip install -r training/requirements_train.txt
+
+# 4. Optional: Install flash-attention for 2-3x speedup (requires CUDA)
+# pip install flash-attn --no-build-isolation
+```
+
+**Note:** If you only need training (already have filtered data), you can skip steps 1-2.
 
 ---
 
@@ -208,17 +350,44 @@ python training/finetune_nllb.py --config final_config_80.yaml
 
 ##  Results
 
+### Final Production Results (10 Epochs on Threshold 0.80)
+
+**Test on High-Quality Data (semantic_80, 908 samples):**
+
+| Model | BLEU | chrF | TER | COMET | Improvement |
+|-------|------|------|-----|-------|-------------|
+| Baseline (pretrained) | 23.65 | 44.91 | 64.97 | 0.87 | - |
+| **Fine-tuned (ours)** | **24.31** | **45.23** | **64.07** | **0.87** | **+2.8% BLEU** |
+
+**Test on Diverse Data (semantic_75, 1,399 samples):**
+
+| Model | BLEU | chrF | TER | COMET | Improvement |
+|-------|------|------|-----|-------|-------------|
+| Baseline (pretrained) | 21.92 | 42.73 | 68.53 | 0.86 | - |
+| **Fine-tuned (ours)** | **24.08** | **44.40** | **65.72** | **0.86** | **+9.9% BLEU** |
+
+### Key Findings
+
+✅ **Model Generalizes Well - No Overfitting!**
+- Fine-tuned on high-quality data (threshold 0.80, 27K pairs)
+- **Better improvement on challenging data** (+9.9%) than on easy data (+2.8%)
+- Baseline struggles with lower quality: BLEU drops 23.65→21.92 (-7.3%)
+- Fine-tuned model robust: BLEU drops only 24.31→24.08 (-0.9%)
+
+✅ **Quality > Quantity Validated:**
+- 27K high-quality pairs (threshold 0.80) outperform larger datasets
+- Semantic alignment critical for translation quality
+- Production-ready: Consistent performance across different data distributions
+
 ### Threshold Comparison (Quick Sweep - 5K steps)
 
-| Threshold | Data Size | BLEU | chrF | TER | COMET | Test Size |
-|-----------|-----------|------|------|-----|-------|-----------|
-| 0.65 (baseline) | 59K | 19.89 | 40.46 | 71.63 | 0.830 | - |
-| 0.75 | 36K | 22.91 | 43.53 | 66.14 | 0.860 | 1,399 |
-| **0.80**  | **27K** | **23.85** | **44.91** | **64.67** | **0.869** | **908** |
+| Threshold | Data Size | BLEU | chrF | TER | COMET |
+|-----------|-----------|------|------|-----|-------|
+| 0.65 (baseline) | 59K | 19.89 | 40.46 | 71.63 | 0.830 |
+| 0.75 | 36K | 22.91 | 43.53 | 66.14 | 0.860 |
+| **0.80 (winner)** | **27K** | **23.85** | **44.91** | **64.67** | **0.869** |
 
-**Winner**: Threshold 0.80
-- **+20% BLEU** improvement vs baseline
-- **Quality > Quantity**: 27K high-quality pairs beat 59K medium-quality pairs
+*Quick sweep results used to select optimal threshold for full production training.*
 
 ---
 

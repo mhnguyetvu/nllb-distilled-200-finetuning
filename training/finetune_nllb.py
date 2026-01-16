@@ -200,7 +200,7 @@ def main():
     config = load_config(args.config)
     
     # Determine log directory: CLI arg > config > default
-    log_dir = args.log_dir or config.get('training', {}).get('log_dir', '../logs')
+    log_dir = args.log_dir or config.get('training', {}).get('log_dir', './logs')
     
     # Setup logging
     global logger

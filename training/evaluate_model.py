@@ -12,7 +12,7 @@ Usage:
 
     # Evaluate finetuned model
     python evaluate_model.py \
-        --model outputs/nllb-ko-vi-finetuned \
+        --model outputs/nllb-balanced-300k/checkpoint-1000 \
         --test data/final/nllb_test.jsonl \
         --output results/finetuned_eval.json
 """
