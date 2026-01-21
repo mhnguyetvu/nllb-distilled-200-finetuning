@@ -25,7 +25,7 @@ results/
 !final_config_80.yaml
 
 # Documentation (local only)
-FULL_GUIDE.md
+# FULL_GUIDE.md
 
 # Backups
 *.bak
